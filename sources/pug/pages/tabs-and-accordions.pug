@@ -1,0 +1,156 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-panel
+
+block variables
+	- var activeIndex = 8
+
+block title
+	title Tabs and accordions
+
+block page
+	// Page Header
+	include ../sections/_header-default
+
+	+breadcrumb-classic('images/bg-01.jpg', 'Tabs and accordions',
+	{
+		0: {
+			"title": "Home",
+			"href": "./"
+		},
+		1: {
+			"title": "Pages",
+			"href": "#"
+		},
+		2: {
+			"title": "Tabs and accordions"
+		}
+	}
+	)
+
+
+	// Tabs & Accordions
+	section.section-lg.section-lg--inset-top-60.bg-white
+
+		.shell.tabs-custom-init.text-sm-left
+
+			h2.text-uppercase.text-md-left tabs & accordions
+			p.text-sm-left.big With modern and intuitive interface of tabs and accordions, you can #[br.veil.reveal-sm-inline]control content to be organized within a single frame.
+
+
+
+			.range.range-xs-center.tabs-custom-wrap.range-sm-left
+				.cell-sm-10.cell-lg-9
+					h4 Horizontal Tabs
+				.cell-sm-10.cell-lg-9
+					// Bootstrap tabs
+					#tabs-1.tabs-custom.tabs-horizontal
+						// Nav tabs
+						ul.nav-custom.nav-custom-tabs
+							li.active: a(href='#tabs-1-1' data-toggle='tab') Tab 1
+							li: a(href='#tabs-1-2' data-toggle='tab') tab 2
+							li: a(href='#tabs-1-3' data-toggle='tab') tab 3
+							li: a(href='#tabs-1-4' data-toggle='tab') tab 4
+
+			.range.range-xs-center.range-sm-left
+				.cell-sm-10.cell-lg-9
+					//- Tab panes
+					.tab-content.text-left
+						div#tabs-1-1.tab-pane.fade.in.active
+							p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers. Our site design and navigation has been thoroughly thought out. The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages quickly.
+							p Site navigation is extremely intuitive and user-friendly. You will always know where you are now and will be able to skip from one page to another with a single mouse click. We use only trusted, verified content, so you can believe every word we are saying. We are always happy to greet the new visitors on our site.
+						div#tabs-1-2.tab-pane.fade
+							p The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages quickly. Site navigation is extremely intuitive and user-friendly. You will always know where you are now and will be able to skip from one page to another with a single mouse click.
+							p We use only trusted, verified content, so you can believe every word we are saying. We are always happy to greet the new visitors on our site. Our blog and social media accounts are available to encourage communication and connection between clients and personnel and tell you more about us in the informal environments where we can have a dialogue instead of just a narrative like that.  With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers.
+						div#tabs-1-3.tab-pane.fade
+							p We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers.
+							p Our site design and navigation has been thoroughly thought out. The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages quickly. Site navigation is extremely intuitive and user-friendly. You will always know where you are now and will be able to skip from one page to another with a single mouse click. We use only trusted, verified content, so you can believe every word we are saying. We are always happy to greet the new visitors on our site. Our blog and social media accounts are available to encourage communication and connection between clients and personnel and tell you more about us.
+						div#tabs-1-4.tab-pane.fade
+							p Our site design and navigation has been thoroughly thought out. The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages quickly. Site navigation is extremely intuitive and user-friendly.
+							p You will always know where you are now and will be able to skip from one page to another with a single mouse click. We use only trusted, verified content, so you can believe every word we are saying. We are always happy to greet the new visitors on our site. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers. You will always know where you are now and will be able to skip from one page to another with a single mouse click. We use only trusted, verified content, so you can believe every word we are saying. We are always happy to greet the new visitors on our site.
+
+		.shell.text-sm-left
+
+
+			.range.range-xs-center.range-sm-left
+				.cell-sm-10.cell-lg-9
+					h4 Vertical Tabs
+				.cell-sm-10.cell-lg-9
+					// Bootstrap tabs
+					#tabs-2.tabs-custom.tabs-vertical
+						// Nav tabs
+						ul.nav-custom.nav-custom-tabs
+							li.active: a(href='#tabs-2-1' data-toggle='tab') tab 1
+							li: a(href='#tabs-2-2' data-toggle='tab') tab 2
+							li: a(href='#tabs-2-3' data-toggle='tab') tab 3
+							li: a(href='#tabs-2-4' data-toggle='tab') tab 4
+
+						//- Tab panes
+						.tab-content.text-left
+							div#tabs-2-1.tab-pane.fade.in.active
+								p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers. Our site design and navigation has been thoroughly thought out. The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages quickly.
+								p Site navigation is extremely intuitive and user-friendly. You will always know where you are now and will be able to skip from one page to another with a single mouse click. We use only trusted, verified content, so you can believe every word we are saying. We are always happy to greet the new visitors on our site.
+							div#tabs-2-2.tab-pane.fade
+								p The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages quickly. Site navigation is extremely intuitive and user-friendly. You will always know where you are now and will be able to skip from one page to another with a single mouse click.
+								p We use only trusted, verified content, so you can believe every word we are saying. We are always happy to greet the new visitors on our site. Our blog and social media accounts are available to encourage communication and connection between clients and personnel and tell you more about us in the informal environments where we can have a dialogue instead of just a narrative like that.  With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers.
+							div#tabs-2-3.tab-pane.fade
+								p We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers.
+								p Our site design and navigation has been thoroughly thought out. The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages quickly. Site navigation is extremely intuitive and user-friendly. You will always know where you are now and will be able to skip from one page to another with a single mouse click. We use only trusted, verified content, so you can believe every word we are saying. We are always happy to greet the new visitors on our site. Our blog and social media accounts are available to encourage communication and connection between clients and personnel and tell you more about us.
+							div#tabs-2-4.tab-pane.fade
+								p Our site design and navigation has been thoroughly thought out. The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages quickly. Site navigation is extremely intuitive and user-friendly.
+								p You will always know where you are now and will be able to skip from one page to another with a single mouse click. We use only trusted, verified content, so you can believe every word we are saying. We are always happy to greet the new visitors on our site. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers. You will always know where you are now and will be able to skip from one page to another with a single mouse click. We use only trusted, verified content, so you can believe every word we are saying. We are always happy to greet the new visitors on our site.
+
+		.shell.text-sm-left
+
+			.range.range-xs-center.panel-custom-group-wrap.range-sm-left.range-20
+				.cell-sm-12
+					h4 Accordion
+				.cell-sm-12
+					// Bootstrap collapse
+					#accordion1.panel-custom-group.text-left(role='tablist', aria-multiselectable='true')
+						+panel({
+							first: true,
+							panelClass: 'panel-custom-default',
+							parentId: 'accordion1',
+							number: '1',
+							header: 'How can I change something in my order?'
+						})
+							p If you need to change something in your order, please contact us immediately. We usually process orders within 30 minutes, and once we have processed your order, we will be unable to make any changes.
+
+
+						+panel({
+							panelClass: 'panel-custom-default',
+							parentId: 'accordion1',
+							number: '2',
+							header: 'How can I pay for my order?'
+						})
+							p We accept Visa, MasterCard, and American Express credit and debit cards for your convenience.
+
+						+panel({
+							panelClass: 'panel-custom-default',
+							parentId: 'accordion1',
+							number: '3',
+							header: 'How long will my order take to be delivered?'
+						})
+							p Delivery times will depend on your location. Once payment is confirmed your order will be packaged. Delivery can be expected within a day.
+
+						+panel({
+							panelClass: 'panel-custom-default',
+							parentId: 'accordion1',
+							number: '4',
+							header: 'Can I return an item?'
+						})
+							p Please contact our administrators for more information on returning products purchased on our website.
+
+						+panel({
+							panelClass: 'panel-custom-default',
+							parentId: 'accordion1',
+							number: '5',
+							header: 'Can I track my order?'
+						})
+							p Yes, you can! After placing your order you will receive an order confirmation via email. Each order starts production 15 minutes after your order is placed. Within a few hours of you placing your order, you will receive an expected delivery time. When the order will be ready for delivery, you will receive another email with the tracking number and a link to trace the order online with the courier.
+
+
+	// Page Footer
+	include ../sections/_footer-default

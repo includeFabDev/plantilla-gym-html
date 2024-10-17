@@ -1,0 +1,51 @@
+/*
+*
+* Team
+* --------------------------------------------------
+*/
+
+.team,
+.team-block {
+  a[href*='mailto'] {
+    display: inline-block;
+    font-family: $font-family-sec;
+    .icon {
+      margin-right: 5px;
+      vertical-align: middle;
+      font-size: 24px;
+
+    }
+    &:hover {
+      color: $gray-base-sec;
+    }
+  }
+}
+
+.team-block {
+  max-width: 370px;
+  margin-left: auto;
+  margin-right: auto;
+  > * + * {
+    margin-top: 20px;
+    @media (min-width: $screen-sm-min) {
+      margin-top: 35px;
+    }
+  }
+  a {
+    transition: 250ms all ease-in-out;
+    img{
+      width: 100%;
+    }
+  }
+  .text-bold,
+  a[href*='mailto'] {
+    font-family: $font-family-sec;
+  }
+}
+
+.team {
+
+  > * + * {
+    margin-top: 20px;
+  }
+}

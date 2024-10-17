@@ -1,0 +1,155 @@
+/*
+*
+* Offsets
+* --------------------------------------------------
+*/
+
+// Element offset
+* + p { margin-top: 15px; }
+p + p { margin-top: 12px; }
+
+
+// Headings
+h1 + h2 { margin-top: 32px; }
+h2 + h3 { margin-top: 32px; }
+h3 + h4 { margin-top: 32px; }
+h4 + h5 { margin-top: 20px; }
+h5 + h6 { margin-top: 20px; }
+h1 + p { margin-top: 45px; }
+
+h2 + h6{ margin-top: 10px; }
+
+
+// Headings + Paragraph
+h2 + p { margin-top: 30px; }
+h3 + p { margin-top: 30px; }
+h4 + p { margin-top: 30px; }
+h5 + p { margin-top: 30px; }
+h6 + p { margin-top: 30px; }
+
+h5 + * {  margin-top: 20px;}
+
+// Paragraph + Headings
+p + h2 { margin-top: 45px; }
+p + h3 { margin-top: 45px; }
+p + h4 { margin-top: 45px; }
+p + h5 { margin-top: 45px; }
+p + h6 { margin-top: 45px; }
+
+
+h4 + h2 { margin-top: 20px; }
+
+// Tags + Tags
+img + p { margin-top: 30px; }
+h4 + img { margin-top: 42px; }
+
+
+// Tags + Classes
+p + .list-marked { margin-top: 10px; }
+
+
+// Classes
+* + .rd-mailform { margin-top: 15px; }
+
+
+// Classes + Tags
+.range + h3 { margin-top: 80px; }
+
+
+// Classes + Classes
+.shell + .shell { margin-top: 60px; }
+.range + .range { margin-top: 60px; }
+
+* + .range-top-0{ margin-top: 0;}
+.range + .range-top-0{ margin-top: 0;}
+
+
+// Media offsets
+
+@media (min-width: $screen-sm-min) {
+
+}
+
+@media (min-width: $screen-md-min) {
+
+}
+
+@media (min-width: $screen-lg-min) {
+
+}
+
+
+html {
+  // Range spacing
+  .range-60 {
+    @include responsive-offset(60px);
+  }
+
+  .range-50 {
+    @include responsive-offset(50px);
+  }
+
+  .range-40 {
+    @include responsive-offset(40px);
+  }
+  .range-30 {
+    @include responsive-offset(30px);
+  }
+  .range-20 {
+    @include responsive-offset(20px);
+  }
+  .range-10 {
+    @include responsive-offset(10px);
+  }
+  .range-0 {
+    @include responsive-offset(0px);
+  }
+
+  @media (min-width: $screen-xs-min){
+    .range-xs-60{
+      @include responsive-offset-media(60px);
+    }
+    .range-xs-20{
+      @include responsive-offset-media(20px);
+    }
+  }
+
+  @media (min-width: $screen-md-min) {
+    .range-md-30 {
+      @include responsive-offset-media(30px);
+    }
+    .range-md-40 {
+      @include responsive-offset-media(40px);
+    }
+    .range-md-50 {
+      @include responsive-offset-media(50px);
+    }
+    .range-md-70 {
+      @include responsive-offset-media(70px);
+    }
+    .range-md-0 {
+      @include responsive-offset-media(0);
+    }
+    .range-md-10 {
+      @include responsive-offset-media(10px);
+    }
+  }
+  @media (min-width: $screen-lg-min){
+    .range-lg-10 {
+      @include responsive-offset-media(10px);
+    }
+  }
+}
+
+.range.range-spacing-sm-10{
+  @media (min-width: $screen-sm-min) {
+    margin-left: -5px;
+    margin-right: -5px;
+    > [class*='cell-']{
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+  }
+
+}
+

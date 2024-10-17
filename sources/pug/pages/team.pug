@@ -1,0 +1,114 @@
+extends  ../_skeleton
+
+block variables
+  - var activeIndex = 8
+
+block title
+  title Team
+
+block page
+  // Page Header
+  include ../sections/_header-default
+
+  +breadcrumb-classic('images/bg-01.jpg', 'Team',
+  {
+    0: {
+      "title": "Home",
+      "href": "./"
+    },
+    1: {
+      "title": "pages",
+      "href": "#"
+    },
+    2: {
+      "title": "Team"
+    }
+  }
+  )
+
+  section.section-md.bg-white
+    .shell.text-sm-left
+      h2.text-spacing-0 My team
+      .range
+        .cell-xs-12
+          // Owl Carousel
+          .owl-carousel.owl-carousel-2.owl-carousel-control-top(data-items='1', data-sm-items='2', data-md-items='3', data-dots='true' data-nav='true' data-stage-padding='15', data-loop='false', data-margin='30', data-mouse-drag="false")
+            .owl-item
+              .team-block.text-sm-left
+                a(href='single-member.html').img-link
+                  img(src="images/team-1-370x342.jpg", width="370", height="342", alt="")
+                p.text-bold.text-gray-darker
+                  a(href='single-member.html').big.text-gray-darker Jane Smith
+                  | #[br] personal coach
+                p She is known for her attention to detail, whether that is focusing on a client’s nutrition and training routine or offering daily motivational support. The result is one of London’s most innovative trainers.
+                ul.list-inline
+                  li
+                    a(href='#').icon.fa-facebook
+                  li
+                    a(href='#').icon.fa-google-plus
+                  li
+                    a(href='#').icon.fa-linkedin
+                  li
+                    a(href='#').icon.fa-twitter
+                a(href="mailto:#").text-bold #[span.icon.mdi-email.mdi.text-gray-sec] info@demolink.org
+
+            .owl-item
+              .team-block.text-sm-left
+                a(href='single-member.html').img-link
+                  img(src="images/team-2-370x342.jpg", width="370", height="342", alt="")
+                p.text-bold.text-gray-darker
+                  a(href='single-member.html').big.text-gray-darker Derick Mathews
+                  | #[br] owner & director
+                p I am a Los Angeles based Fitness Professional. With 20+ years of experience in teaching, training and continuing my education, I have transformed thousands of lives through fitness and healthy lifestyle changes.
+                ul.list-inline
+                  li
+                    a(href='#').icon.fa-facebook
+                  li
+                    a(href='#').icon.fa-google-plus
+                  li
+                    a(href='#').icon.fa-linkedin
+                  li
+                    a(href='#').icon.fa-twitter
+                a(href="mailto:#").text-bold #[span.icon.mdi-email.mdi.text-gray-sec] info@demolink.org
+            .owl-item
+              .team-block.text-sm-left
+                a(href='single-member.html').img-link
+                  img(src="images/team-3-370x342.jpg", width="370", height="342", alt="")
+                p.text-bold.text-gray-darker
+                  a(href='single-member.html').big.text-gray-darker April Smith
+                  | #[br] junior trainer
+                p April’s career in the fitness industry began simply as a goal to learn as much as possible about living a physically active, healthy and fit lifestyle with a mission to influence other people.
+                ul.list-inline
+                  li
+                    a(href='#').icon.fa-facebook
+                  li
+                    a(href='#').icon.fa-google-plus
+                  li
+                    a(href='#').icon.fa-linkedin
+                  li
+                    a(href='#').icon.fa-twitter
+                a(href="mailto:#").text-bold #[span.icon.mdi-email.mdi.text-gray-sec] info@demolink.org
+            .owl-item
+              .team-block.text-sm-left
+                a(href='single-member.html').img-link
+                  img(src="images/team-1-370x342.jpg", width="370", height="342", alt="")
+                p.text-bold.text-gray-darker
+                  a(href='single-member.html').big.text-gray-darker Jane Smith
+                  | #[br] personal coach
+                p She is known for her attention to detail, whether that is focusing on a client’s nutrition and training routine or offering daily motivational support. The result is one of London’s most innovative trainers.
+                ul.list-inline
+                  li
+                    a(href='#').icon.fa-facebook
+                  li
+                    a(href='#').icon.fa-google-plus
+                  li
+                    a(href='#').icon.fa-linkedin
+                  li
+                    a(href='#').icon.fa-twitter
+                a(href="mailto:#").text-bold #[span.icon.mdi-email.mdi.text-gray-sec] info@demolink.org
+
+
+  // Page Footer
+  include ../sections/_footer-default
+
+

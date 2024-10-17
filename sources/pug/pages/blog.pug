@@ -1,0 +1,150 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-panel
+include ../elements/_widget-flickrfeed
+  include ../elements/_widget-twitter
+
+block variables
+  - var activeIndex = 5
+
+block title
+  title Blog
+
+block page
+  // Page Header
+  include ../sections/_header-default
+
+  +breadcrumb-classic('images/bg-01.jpg', 'blog',
+  {
+    0: {
+      "title": "Home",
+      "href": "./"
+    },
+    1: {
+      "title": "blog"
+    }
+  }
+  )
+
+  section.section-md.bg-white
+    .shell
+      h2.text-spacing-0.text-md-left Blog
+      .range.range-40.range-md-reverse
+        .cell-md-9.cell-lg-8.cell-lg-preffix-1
+          .post-blog.text-sm-left
+            p.font-accent.big April 20, 2017
+            h4
+              a(href="single-post.html").text-gray-darker Prioritizing Quality In CrossFit
+            .range
+              .cell-sm-6.cell-md-7
+                img(src="images/blog-1-470x339.jpg", width="470", height="339", alt="")
+              .cell-sm-6.cell-md-5
+                p So you have been doing CrossFit for some time now, and you have made noticeable gains in your fitness. That is great! Now, you should take some time to stop what you are doing and reflect on how incredible it is that you are improving your body’s health and capabilities. Getting your first chin up, muscle up, or handstand push up is an accomplishment worth celebrating. In this post, I’ll tell you what you should do to...
+                a(href='single-post.html').link.font-accent.text-bold.arrow.arrow-sm.arrow-right Read more
+                .button-block
+                  a(href='#').button.button-primary crossfit
+                  a(href='#').button.button-primary workout
+          .post-blog.text-sm-left
+            p.font-accent.big April 15, 2017
+            h4
+              a(href="single-post.html").text-gray-darker Say yes to weights
+            .range
+              .cell-sm-6.cell-md-7
+                img(src="images/blog-2-470x339.jpg", width="470", height="339", alt="")
+              .cell-sm-6.cell-md-5
+                p When most people hear the words “strength training”, they immediately think of body building, power lifting or strenuous workouts. To the average person or someone newly into CrossFit, strength training and using weights can be intimidating. A lot of people think that strength training is only associated with athletes and experienced individuals. Although I believe any form of exercise...
+                a(href='single-post.html').link.font-accent.text-bold.arrow.arrow-sm.arrow-right Read more
+                .button-block
+                  a(href='#').button.button-primary Crossfit
+                  a(href='#').button.button-primary weight
+          .post-blog.text-sm-left
+            p.font-accent.big April 10, 2017
+            h4
+              a(href="single-post.html").text-gray-darker Monday motivation
+            .range
+              .cell-sm-6.cell-md-7
+                img(src="images/blog-3-470x339.jpg", width="470", height="339", alt="")
+              .cell-sm-6.cell-md-5
+                p Happy Monday! Most people dread Monday, but I like to look at it as the perfect day to start fresh. Whether you've neglected your fitness routine, fallen into bad eating habits, or both - today is the day to get back on track. I get it... juggling work, family time, chores, school and social life can be tough. With events, weddings, appointments and long work hours, it can be easy for some people to put off ...
+                a(href='single-post.html').link.font-accent.text-bold.arrow.arrow-sm.arrow-right Read more
+                .button-block
+                  a(href='#').button.button-primary article
+                  a(href='#').button.button-primary motivation
+          .range.text-sm-left
+            .cell-xs-12
+              ul.pagination-custom
+                li.disabled
+                 a(href='#').icon.mdi.material-icons-keyboard_backspace
+                li.active
+                  a(href='#') 1
+                li
+                  a(href='#') 2
+                li
+                  a(href='#') 3
+                li.dot
+                  a(href='#') 4
+                li
+                  a(href='#') 15
+                li
+                  a(href='#').icon.mdi.material-icons-keyboard_backspace
+
+        .cell-md-3.cell-lg-3
+          .range
+            .cell-xs-12.text-md-left
+              p.font-accent.big.text-bold.text-gray-darker Search
+              // RD Search
+              form.rd-search(action="search-results.html", method="GET", data-search-live="")
+                .form-wrap
+
+                  input(class="form-input" id="rd-search-form-input" type="text" name="s" autocomplete="off")
+                  button(type='submit').form-search-submit.arrow.arrow-right Search
+                #rd-search-results-live.rd-search-results-live
+          .range
+            .cell-xs-12.text-md-left
+              p.font-accent.big.text-bold.text-gray-darker Flickr
+              // RD Flickr
+              +widget-flickrfeed("tm-62181", {"data-image_q": "src"}, {
+                "style": "group group-xs widget-flickrfeed-lg",
+                "dataSize": "1050x700",
+                "img": {
+                  "width": 86,
+                  "height": 83
+                }
+              }, 6)
+          .range.range-50
+            .cell-xs-12.cell-sm-7.cell-md-12.text-sm-left
+              p.font-accent.big.text-bold.text-gray-darker Twitter Feed
+              +widget-twitter({
+                "dataTwitterUsername": "templatemonster"
+              })
+            .cell-xs-12.cell-sm-3.cell-md-12.text-sm-left
+              p.font-accent.big.text-bold.text-gray-darker.text-center.text-sm-left Archive
+              ul.list.list-marked.text-left.list-regular.list-inline-block
+                li
+                  a(href='#') March
+                li
+                  a(href='#') February
+                li
+                  a(href='#') January
+                li
+                  a(href='#') December
+                li
+                  a(href='#') November
+                li
+                  a(href='#') October
+                li
+                  a(href='#') September
+                li
+                  a(href='#') August
+
+
+
+
+
+
+
+  // Page Footer
+  include ../sections/_footer-default
+
+

@@ -1,0 +1,188 @@
+.bg-image-blockquote {
+  background: url("../images/typography-1-771x483.jpg") center;
+  background-size:  cover;
+}
+
+* + .quote {
+  margin-top: 10px;
+  @media (min-width: $screen-sm-min) {
+    margin-top: 30px;
+  }
+}
+
+.quote {
+
+  p + p {
+    margin-top: 20px;
+    @media (min-width: $screen-sm-min) {
+      margin-top: 30px;
+    }
+  }
+}
+
+.quote-top {
+  display: block;
+  margin-top: 25px;
+  font-family: $font-family-sec;
+  font-size: 80px;
+  line-height: 30px;
+  transform: translateY(50%);
+
+
+
+  @media (min-width: $screen-sm-min) {
+    margin-top: 35px;
+  }
+}
+
+.quote-horizontal{
+  position: relative;
+  padding: 0 20px;
+  &:before,
+  &:after{
+    position: absolute;
+    display: inline-block;
+    font-size: 90px;
+    line-height: 1;
+    font-family: $font-family-sec;
+    color: $gray-base-sec;
+    @media (min-width: $screen-md-min){
+      font-size: 140px;
+    }
+  }
+  &:before{
+    content: '“';
+    left: -15px;
+    top: -55px;
+    transform: rotateX(180deg);
+  }
+  &:after{
+    content: '“';
+    right: -15px;
+    bottom: 15px;
+    transform: rotateY(180deg);
+    @media (min-width: $screen-md-min){
+      top: 15px;
+      bottom: inherit;
+    }
+  }
+  @media (min-width: $screen-md-min){
+    padding:0 50px;
+  }
+}
+
+.name {
+  font-weight: 700;
+  color: $primary;
+  font-family: $font-family-sec;
+  span{
+    font-size: 14px;
+  }
+}
+.quote-2{
+  q {
+    position: relative;
+    padding-left: 20px;
+    display: block;
+    font-size: 18px;
+    @media (min-width: $screen-xs-min) {
+      padding-left: 30px;
+    }
+    @media (min-width: $screen-md-min) {
+      padding-left: 50px;
+    }
+    @media (min-width: $screen-lg-min) {
+      padding-left: 60px;
+    }
+    &:before, &:after {
+      content: '“';
+      font-family: $font-family-sec;
+      line-height: 1;
+
+      transform: rotateX(180deg);
+
+
+
+    }
+    &:before {
+      position: absolute;
+      left: 0;
+      top: -10px;
+      font-size: 80px;
+      display: inline-block;
+      z-index:2;
+      @media (min-width: $screen-sm-min) {
+        top: -20px;
+      }
+      @media (min-width: $screen-md-min) {
+        font-size: 110px;
+      }
+      @media (min-width: $screen-lg-min) {
+        top: -30px;
+        font-size: 150px;
+      }
+
+    }
+    &:after {
+      position: relative;
+      display: inline-block;
+      right: -5px;
+      bottom: -5px;
+      font-size: 40px;
+      line-height: 0;
+      transform: rotateZ(180deg);
+      @media (min-width: $screen-lg-min) {
+        font-size: 60px;
+      }
+    }
+  }
+}
+
+.quote-box{
+  max-width: 570px;
+  height: 485px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 70px 15px;
+  display: flex;
+  align-items: center;
+
+  @media (min-width: $screen-lg-min){
+    align-items: flex-end;
+  }
+
+  @media (min-width: $screen-xl-min){
+    max-width: inherit;
+  }
+
+  .quote-caption{
+    max-width: 455px;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+}
+.quote-book{
+  q{
+    padding-left: 30px;
+    &:before, &:after {
+      transform: rotateX(0);
+    }
+    &:after {
+      position: absolute;
+      right: inherit;
+      margin-left: 10px;
+      transform: rotateZ(0) rotateY(180deg);
+    }
+
+    @media (min-width: $screen-xs-min){
+      padding-left: 45px;
+
+    }
+    @media (min-width: $screen-lg-min){
+      &:before{
+        left: -15px;
+      }
+    }
+  }
+}

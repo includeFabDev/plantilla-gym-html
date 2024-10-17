@@ -1,0 +1,99 @@
+extends  ../_skeleton
+
+block variables
+	- var activeIndex = 8
+
+block title
+	title Buttons
+
+block page
+	// Page Header
+	include ../sections/_header-default
+
+	// Buttons
+	+breadcrumb-classic('images/bg-01.jpg', 'Buttons',
+	{
+		0: {
+			"title": "Home",
+			"href": "./"
+		},
+		1: {
+			"title": "Pages",
+			"href": "#"
+		},
+		2: {
+			"title": "Buttons"
+		}
+	}
+	)
+
+	section.section-md
+		.shell.text-md-left
+			.range.range-xs-center.range-md-left
+				.cell-xs-10.cell-md-6.cell-lg-5
+					h1 buttons
+					p.big Easily insert buttons and call-to-actions in any page, #[br.veil.reveal-md]use amazing custom options to spice up your pages.
+			.range.range-xs-center.range-md-left.range-20
+				.cell-xs-10
+					h4 Button Sizes
+				.cell-xs-10
+					p 4 different sizes: super, large, default & small
+				.cell-xs-10
+					.group-xl
+						a(href="#").button.button-lg.button-primary.arrow.arrow-right.text-spacing-25 Super
+						a(href="#").button.button-md.button-primary.arrow.arrow-right.text-spacing-25.text-bold Large
+						a(href="#").button.button-primary.arrow.arrow-right Default
+						a(href="#").button.button-sm.button-primary.arrow.arrow-right.text-spacing-100  Small
+
+			.range.range-xs-center.range-md-left.range-20
+				.cell-xs-10
+					h4 Button Shapes
+				.cell-xs-10
+					p 3 different shapes: default, round and circle. 
+				.cell-xs-10
+					.group-xl
+						a(href="#").button.button-primary.arrow.arrow-right Default
+						a(href="#").button.button-ellipse-md.button-primary.arrow.arrow-right Round
+						a(href="#").button.button-circle.button-primary.arrow.arrow-right Circle
+			.range.range-xs-center.range-md-left.range-20
+				.cell-xs-10
+					h4 Buttons with Icons
+				.cell-xs-10
+					p Buttons are fully integrated with 900+ icons.
+
+				.cell-xs-12
+
+					.group-xl
+
+						a(href="#").button.button-primary.button-icon.button-icon-left.text-spacing-25
+							span.icon.thin-icon-download.icon-lg
+							| Left icon
+
+						a(href="#").button.button-primary.button-icon.button-icon-right.text-spacing-25
+							| Right icon
+							span.icon.thin-icon-download.icon-lg
+
+
+						a(href="#").button.button-secondary.button-icon.button-icon-left.text-spacing-25
+							span.icon.thin-icon-download.icon-lg
+							| Left icon
+
+						a(href="#").button.button-secondary.button-icon.button-icon-right.text-spacing-25
+							| Right icon
+							span.icon.thin-icon-download.icon-lg
+
+			.range.range-xs-center.range-md-left.range-20
+				.cell-xs-10
+					h4 Buttons with Shadow
+				.cell-xs-10
+					p Enhance your buttons with a shadow effect.
+				.cell-xs-10
+
+					.group-xl
+						a(href="#").button.button-primary.button-shadow
+							| shadow
+						a(href="#").button.button-secondary-1.button-shadow
+							| shadow
+
+	// Page Footer
+	include ../sections/_footer-default

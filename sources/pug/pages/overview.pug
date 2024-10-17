@@ -1,0 +1,114 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-panel
+
+block variables
+  - var activeIndex = 2
+
+block title
+  title Overview
+
+block page
+  // Page Header
+  include ../sections/_header-default
+
+  +breadcrumb-classic('images/bg-01.jpg', 'Overview',
+  {
+    0: {
+      "title": "Home",
+      "href": "./"
+    },
+    1: {
+      "title": "about",
+      "href": "about.html"
+    },
+    2:{
+      "title": "overview"
+    }
+  }
+  )
+
+  section.section-md.bg-image-5
+    .shell.text-sm-left
+      h2.text-white.text-spacing-0 About me
+      .range.range-md-left.range-50
+        .cell-md-6
+          p.big My definition of training is: “making your MIND comfortable with the fact that your BODY is going to be a little uncomfortable”. People who don’t like to exercise usually just don’t like to be uncomfortable, but getting out of our comfort zones – mentally or physically – is where positive change happens. Nobody improves while sitting under a warm fuzzy blanket. My specialty is helping people to get out of their comfort zones whether it’s for a minute or an hour.
+          .range.range-40
+            .cell-xs-12
+              .unit.unit-horizontal.text-left
+                .unit__left
+                  p.heading-4.text-regular.text-white 1995
+                .unit__body
+                  p I fell in love with fitness, and especially with CrossFit and yoga! In 1995, I studied on the south coast of England in many disciplines of fitness. I had one goal, to be the best and to help people become their best. Eventually, I chose CrossFit, boxing, and yoga as my specialization.
+            .cell-xs-12
+              .unit.unit-horizontal.text-left
+                .unit__left
+                  p.heading-4.text-regular.text-white 2001
+                .unit__body
+                  p After six years I have risen to the top of the industry and am lucky enough to work with and learn from the best in the world. I have developed a wealth of experience and knowledge on optimising body composition.
+                  p.text-white I now offer all my experience to my clients at a fraction of the price of one-to- one personal training sessions with me. You will receive the best service, support and motivation to ensure your success. Myself and my team specialise in body composition nutrition, and strength training.
+
+        .cell-md-6
+          .range.range-40.range-md-70
+            .cell-xs-12
+              .block-program.text-left
+                p.heading-4.text-regular.text-white 2005 #[br] #[span.big Start of my program]
+                h3.text-white my personal free 14 days fat loss guide
+                a(href='#').button.button-icon.button-primary-2
+                  span.icon.thin-icon-download.icon-lg
+                  | Download
+
+            .cell-xs-12
+              .unit.unit-horizontal.text-left
+                .unit__left
+                  p.heading-4.text-regular.text-white 2011
+                .unit__body
+                  p I started blogging in 2011.  Today I am also a Show Host, Fitness Lifestyle Model, and Spokesperson. I moved to L.A. to pursue television and film production work. As my interest in Crossfit and other fitness disciplines grew, my career goal became finding a way to fuse my two passions – production and fitness. It’s been an amazing journey, and well worth the trip!
+
+  section.section-md.bg-gray
+    .shell
+      h2.text-spacing-0 My books
+      .range
+        .cell-xs-12
+          // Owl Carousel
+          .owl-carousel.owl-carousel-2(data-items='1', data-sm-items='2', data-md-items='3', data-dots='true' data-nav='true' data-stage-padding='15', data-loop='false', data-margin='30', data-mouse-drag="false")
+            .owl-item
+              a(href='single-book.html').img-link
+                img(src="images/overview-1-370x436.jpg", width="370", height="436", alt="")
+            .owl-item
+              a(href='single-book.html').img-link
+                img(src="images/overview-2-370x436.jpg", width="370", height="436", alt="")
+            .owl-item
+              a(href='single-book.html').img-link
+                img(src="images/overview-3-370x436.jpg", width="370", height="436", alt="")
+            .owl-item
+              a(href='single-book.html').img-link
+                img(src="images/overview-1-370x436.jpg", width="370", height="436", alt="")
+
+  section.section-md.bg-white
+    .shell
+      h2.text-spacing-0 Career Highlights:
+      .range.text-left.range-10.range-sm-30.range-sm-justify
+        .cell-sm-5
+          ul.list.list-marked-type-1.list-marked-inset-left.text-gray-sec.big
+            li Personal and Group CrossFit Trainer and Health Coach.
+            li Spinning (former Master Trainer and IDEA presenter – traveled internationally)
+            li Step Aerobics (former Master Trainer – traveled internationally)
+            li Pilates Reformer instructor
+            li Private Boot Camp Trainer
+            li ACE, AFAA, Stott Pilates certified.
+        .cell-sm-6
+          ul.list.list-marked-type-1.list-marked-inset-left.text-gray-sec.big
+            li Profiled on USA Network for Subaru with my rescue dog Roscoe for their Character Profile series.
+            li Infomercial Host, Writer and Producer providing expert testimonials.
+            li Lead Trainer and creator of “Feel Fit Forever” fitness videos.
+            li Trainer for infomercials (sometimes there are people who need help with Before & After photos that show their exceptional results)
+
+
+
+  // Page Footer
+  include ../sections/_footer-default
+
+

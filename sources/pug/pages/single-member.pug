@@ -1,0 +1,101 @@
+extends  ../_skeleton
+
+block variables
+  - var activeIndex = 8
+
+block title
+  title Single member
+
+block page
+  // Page Header
+  include ../sections/_header-default
+
+  +breadcrumb-classic('images/bg-01.jpg', 'Single member',
+  {
+    0: {
+      "title": "Home",
+      "href": "./"
+    },
+    1: {
+      "title": "pages",
+      "href": "#"
+    },
+    2: {
+      "title": "Single member"
+    }
+  }
+  )
+
+  section.section-md.bg-white
+    .shell.text-sm-left
+      h2.text-spacing-0 Our team
+      .range
+        .cell-xs-12
+          // Owl Carousel
+          .owl-carousel.owl-carousel-2.owl-carousel-3(data-items='1',  data-dots='true' data-nav='true' data-stage-padding='15', data-loop='false', data-margin='30', data-mouse-drag="false")
+            .owl-item
+              .range.range-md-justify
+                .cell-md-5
+                  img(src="images/team-4-470x498.jpg", width="470", height="498", alt="")
+                .cell-md-6.text-md-left.team
+                  h4 Derick Mathews #[br]#[span.big owner & director]
+                  p.big I am a Los Angeles based Fitness Professional.  With 20+ years of experience in teaching, training and continuing my education, I have transformed thousands of lives through fitness and healthy lifestyle changes.
+                  p Outside of the gym or studio, I am also a Content Producer, Writer, Director and Consultant for infomercials, fitness products, marketing videos and related media. Somewhere along the way, I became an “Influencer”  and thanks to my background in journalism and media, I started blogging in 2009. In front of the camera, I am a Show Host, Fitness Lifestyle Model, and Spokesperson. I moved to LA to pursue television and film production work. As my interest in fitness grew, my career goal became finding a way to fuse my two passions – production and fitness. It’s been an amazing journey, and well worth the trip!
+                  ul.list-inline
+                    li
+                      a(href='#').icon.fa-facebook
+                    li
+                      a(href='#').icon.fa-google-plus
+                    li
+                      a(href='#').icon.fa-linkedin
+                    li
+                      a(href='#').icon.fa-twitter
+                  a(href="mailto:#").text-bold #[span.icon.mdi-email.mdi.text-gray-sec] info@demolink.org
+
+
+            .owl-item
+              .range.range-md-justify
+                .cell-md-5
+                  img(src="images/team-5-470x498.jpg", width="470", height="498", alt="")
+                .cell-md-6.text-md-left.team
+                  h4 Sandra Lincoln #[br]#[span.big owner & director]
+                  p.big I am a Los Angeles based Fitness Professional.  With 20+ years of experience in teaching, training and continuing my education, I have transformed thousands of lives through fitness and healthy lifestyle changes.
+                  p Outside of the gym or studio, I am also a Content Producer, Writer, Director and Consultant for infomercials, fitness products, marketing videos and related media. Somewhere along the way, I became an “Influencer”  and thanks to my background in journalism and media, I started blogging in 2009. In front of the camera, I am a Show Host, Fitness Lifestyle Model, and Spokesperson. I moved to LA to pursue television and film production work. As my interest in fitness grew, my career goal became finding a way to fuse my two passions – production and fitness. It’s been an amazing journey, and well worth the trip!
+                  ul.list-inline
+                    li
+                      a(href='#').icon.fa-facebook
+                    li
+                      a(href='#').icon.fa-google-plus
+                    li
+                      a(href='#').icon.fa-linkedin
+                    li
+                      a(href='#').icon.fa-twitter
+                  a(href="mailto:#").text-bold #[span.icon.mdi-email.mdi.text-gray-sec] info@demolink.org
+
+
+            .owl-item
+              .range.range-md-justify
+                .cell-md-5
+                  img(src="images/team-4-470x498.jpg", width="470", height="498", alt="")
+                .cell-md-6.text-md-left.team
+                  h4 Derick Mathews #[br]#[span.big owner & director]
+                  p.big I am a Los Angeles based Fitness Professional.  With 20+ years of experience in teaching, training and continuing my education, I have transformed thousands of lives through fitness and healthy lifestyle changes.
+                  p Outside of the gym or studio, I am also a Content Producer, Writer, Director and Consultant for infomercials, fitness products, marketing videos and related media. Somewhere along the way, I became an “Influencer”  and thanks to my background in journalism and media, I started blogging in 2009. In front of the camera, I am a Show Host, Fitness Lifestyle Model, and Spokesperson. I moved to LA to pursue television and film production work. As my interest in fitness grew, my career goal became finding a way to fuse my two passions – production and fitness. It’s been an amazing journey, and well worth the trip!
+                  ul.list-inline
+                    li
+                      a(href='#').icon.fa-facebook
+                    li
+                      a(href='#').icon.fa-google-plus
+                    li
+                      a(href='#').icon.fa-linkedin
+                    li
+                      a(href='#').icon.fa-twitter
+                  a(href="mailto:#").text-bold #[span.icon.mdi-email.mdi.text-gray-sec] info@demolink.org
+
+
+
+
+  // Page Footer
+  include ../sections/_footer-default
+
+

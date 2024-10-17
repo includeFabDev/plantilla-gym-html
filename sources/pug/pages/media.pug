@@ -1,0 +1,92 @@
+extends  ../_skeleton
+
+block variables
+  - var activeIndex = 8
+
+block title
+  title Media
+
+block page
+  // Page Header
+  include ../sections/_header-default
+
+  +breadcrumb-classic('images/bg-01.jpg', 'media',
+  {
+    0: {
+      "title": "Home",
+      "href": "./"
+    },
+    1: {
+      "title": "Pages",
+      "href": "#"
+    },
+    2: {
+      "title": "media"
+    }
+  }
+  )
+
+
+  section.section-md.bg-white
+    .shell
+      h2.text-sm-left.text-spacing-0 Media
+      .range.range-center.range-30(data-photo-swipe-gallery="gallery")
+        .cell-xs-10.cell-sm-6.cell-md-4
+          // PhotoSwipe image
+          a(data-photo-swipe-item='', data-size='1200x757', href='images/gallery-1-384x362_original.jpg').img-link
+            img(src='images/media-1-370x349.jpg', width='370', height='349', alt='')
+        .cell-xs-10.cell-sm-6.cell-md-4
+          // PhotoSwipe image
+          a(data-photo-swipe-item='', data-size='1200x767', href='images/gallery-2-384x362_original.jpg').img-link
+            img(src='images/media-2-370x349.jpg', width='370', height='349', alt='')
+        .cell-xs-10.cell-sm-6.cell-md-4
+          // PhotoSwipe image
+          a(data-photo-swipe-item='', data-size='800x1200', href='images/gallery-3-384x362_original.jpg').img-link
+            img(src='images/media-3-370x349.jpg', width='370', height='349', alt='')
+        .cell-xs-10.cell-sm-6.cell-md-4
+          // PhotoSwipe image
+          a(data-photo-swipe-item='', data-size='1200x875', href='images/gallery-4-384x362_original.jpg').img-link
+            img(src='images/media-4-370x349.jpg', width='370', height='349', alt='')
+        .cell-xs-10.cell-sm-6.cell-md-4
+          // PhotoSwipe image
+          a(data-photo-swipe-item='', data-size='1200x800', href='images/gallery-5-384x362_original.jpg').img-link
+            img(src='images/media-5-370x349.jpg', width='370', height='349', alt='')
+        .cell-xs-10.cell-sm-6.cell-md-4
+          // PhotoSwipe image
+          a(data-photo-swipe-item='', data-size='1200x801', href='images/gallery-6-384x362_original.jpg').img-link
+            img(src='images/media-6-370x349.jpg', width='370', height='349', alt='')
+        .cell-xs-10.cell-sm-6.cell-md-4
+          // PhotoSwipe image
+          a(data-photo-swipe-item='', data-size='1200x1000', href='images/gallery-7-384x362_original.jpg').img-link
+            img(src='images/media-7-370x349.jpg', width='370', height='349', alt='')
+        .cell-xs-10.cell-sm-6.cell-md-4
+          // PhotoSwipe image
+          a(data-photo-swipe-item='', data-size='1200x800', href='images/gallery-8-384x362_original.jpg').img-link
+            img(src='images/media-8-370x349.jpg', width='370', height='349', alt='')
+        .cell-xs-10.cell-sm-6.cell-md-4
+          // PhotoSwipe image
+          a(data-photo-swipe-item='', data-size='1200x862', href='images/gallery-9-384x362_original.jpg').img-link
+            img(src='images/media-9-370x349.jpg', width='370', height='349', alt='')
+      .range
+        .cell-xs-12.text-md-right
+          ul.pagination-custom
+            li.disabled
+              a(href='#').icon.mdi.material-icons-keyboard_backspace
+            li.active
+              a(href='#') 1
+            li
+              a(href='#') 2
+            li
+              a(href='#') 3
+            li.dot 
+              a(href='#') 4
+            li
+              a(href='#') 15
+            li
+              a(href='#').icon.mdi.material-icons-keyboard_backspace
+
+
+
+
+  // Page Footer
+  include ../sections/_footer-default

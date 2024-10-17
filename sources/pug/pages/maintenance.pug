@@ -1,0 +1,50 @@
+extends  ../_skeleton
+
+block variables
+  - var activeIndex = 8
+
+block title
+  title Maintenance
+
+block page
+  // Page Header
+  include ../sections/_header-default
+
+  +breadcrumb-classic('images/bg-01.jpg', 'maintenance',
+  {
+    0: {
+      "title": "Home",
+      "href": "./"
+    },
+    1: {
+      "title": "Pages",
+      "href": "#"
+    },
+    2: {
+      "title": "maintenance"
+    }
+  }
+  )
+
+
+  section.section-lg.bg-white
+    .shell
+      h2.text-sm-left.text-spacing-0 The website is in #[br]the maintenance mode
+      .range.range-left
+        .cell-md-9.cell-lg-8
+          p.text-sm-left.big Our website is currently under maintenance. We are preparing our website to give you the best user experience you can possibly have on our website. If you want to be notified when we will be back online, please enter your e-mail in the form below.
+      .range.range-left
+        .cell-md-9.cell-lg-8
+          // RD Mailform
+          form.rd-mailform.text-left(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+            .range.range-spacing-sm-10.text-sm-left.range-10
+              .cell-sm-9
+                .form-wrap
+                  input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+              .cell-sm-3.text-center.text-sm-left
+                button(type="submit").button.button-primary-2.text-spacing-0.button-md Notify me
+
+
+
+  // Page Footer
+  include ../sections/_footer-default

@@ -1,0 +1,208 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-pagination
+include ../elements/_ui-counter
+
+block variables
+  - var activeIndex = 1
+
+block title
+  title Home
+
+block page
+  // Page Header
+  include ../sections/_header-center
+
+  section
+    .swiper-container.swiper-slider(data-loop='false' data-autoplay='false' data-simulate-touch="false")
+      .swiper-wrapper
+        .swiper-slide(data-slide-bg='images/home-2-slide-1.jpg')
+  
+          .swiper-slide-caption
+            h1 Let’s Get moving
+            p.big.text-uppercase.text-bold I really know how to push my clients #[br]to look and feel amazing!
+            a(href='coaching.html').button.button-white.arrow-right.arrow view programs
+  
+        .swiper-slide(data-slide-bg='images/home-2-slide-2.jpg')
+  
+          .swiper-slide-caption
+            h1 Coaching Programs
+            p.big.text-uppercase.text-bold Even a beginner in CrossFit can benefit from my workout programs
+            a(href='coaching.html').button.button-white.arrow-right.arrow view programs
+  
+        .swiper-slide(data-slide-bg='images/home-2-slide-3.jpg')
+  
+          .swiper-slide-caption
+            h1 Not Just Training
+            p.big.text-uppercase.text-bold I am also a fitness theorist writing books about food and workouts
+            a(href='coaching.html').button.button-white.arrow-right.arrow view programs
+  
+      // Swiper Pagination
+      .swiper-pagination.veil-lg
+      // Swiper Navigation
+      .swiper-button-prev.material-icons-keyboard_backspace
+      .swiper-button-next.material-icons-keyboard_backspace
+
+  section
+    .range.range-condensed
+      .cell-lg-6.thumbnail-type-1.thumbnail-type-3.bg-dark(style='background-image: url(images/home-2-1-960x803.jpg);')
+        .shell
+          .range.range-center
+            .cell-xs-10
+              .thumbnail-caption
+                h4.text-regular.text-spacing-0 Revolutionize your fitness!
+                h2.text-spacing-0 Body Transformation
+                h6.text-bold Express (2 weeks), Smart (3 months), Normal (6 months)
+                .range.range-center.range-md-0.range-10
+                  .cell-xs-6.cell-md-5.cell-lg-6.cell-xl-4.text-xs-right
+                    a(href='coaching.html').button.button-primary-2.arrow-left.arrow for him
+                  .cell-xs-6.cell-md-5.cell-lg-6.cell-xl-4.text-xs-left
+                    a(href='coaching.html').button.button-white-2.arrow-right.arrow.text-bold for her
+      .cell-lg-6
+        .range.range-center.range-condensed
+          .cell-sm-6
+            .bg-fullwidth-wrap-2
+              img(src="images/home-2-3-482x404.jpg", width="482", height="404", alt="")
+          .cell-sm-6.thumbnail-type-2.bg-primary
+            .shell
+              .range.range-center
+                .cell-xs-10.cell-lg-11
+                  .caption
+                    h5.text-spacing-150.text-opacity-05.text-white i create
+                    h4.text-white Personal Nutritional Programs
+                    a(href='coaching.html').button.button-primary-3.arrow.arrow-left read more
+
+        .range.range-center.range-condensed.range-sm-reverse.range-top-0
+          .cell-sm-6
+            .bg-fullwidth-wrap-2
+              img(src="images/home-2-4-482x403.jpg", width="482", height="403", alt="")
+          .cell-sm-6.thumbnail-type-2.bg-primary
+            .shell
+              .range.range-center
+                .cell-xs-10.cell-lg-11
+                  .caption
+                    h4.text-white My Home Training Course
+                    h5.text-spacing-150.text-opacity-05.text-white  is now available
+                    a(href='coaching.html').button.button-primary-3.arrow.arrow-right read more
+
+
+
+  section
+    .range.range-condensed.range-lg-reverse
+
+      .cell-lg-6.thumbnail-type-1.thumbnail-type-3.bg-image(style='background-image: url("images/home-2-2-960x804.jpg"); background-position-x: 98%; background-repeat: no-repeat;')
+        .shell
+          .range.range-center
+            .cell-xs-11.cell-xl-8
+              .thumbnail-caption
+
+                h4.text-uppercase.text-white.text-spacing-150 my personal free 14 days
+                h2.text-uppercase.text-white fat loss guide
+                p.text-bold.text-white The Fat Loss expert guide teaches you everything you need to know about losing body fat while maintaining muscle mass. Use this guide for your fat loss plan!
+
+                a(href='#').button.button-white.button-icon.button-icon-right Download
+                  span.icon.thin-icon-download.icon-lg
+
+      .cell-lg-6.bg-primary
+        .section-md
+          .caption
+            .range.range-center
+              .cell-md-10.text-lg-left
+                h2.text-spacing-0.text-white Featured Classes
+                h6.text-bold.text-white.text-opacity-05 If you want to change your body, you can start with these programs
+                .range.range-50
+                  .cell-xs-12
+                    p Physical exercise is any bodily activity that enhances or maintains physical fitness and overall health. If you’re already a well-conditioned athlete, I’ll make you stronger and faster. If you’re taking initial steps to make fitness a part of your lifestyle, I’ll coach you with personal training and proper nutrition. If you’re just looking to change up your workout routine, then my unique formula to workout design will refresh and motivate you.
+                  .cell-xs-6.text-sm-left
+                    .unit
+                      .unit__left.text-white.heading-4.text-regular 01.
+                      .unit__body
+                        h6.text-bold.text-white Martial arts
+                        p.text-opacity-05 Martial arts are codified systems of combat practices, which are practiced for a number of reasons.
+                  .cell-xs-6.text-sm-left
+                    .unit
+                      .unit__left.text-white.heading-4.text-regular 02.
+                      .unit__body
+                        h6.text-bold.text-white Spinning
+                        p.text-opacity-05 The average Spinning class burns an average of 500 calories.
+                  .cell-xs-6.text-sm-left
+                    .unit
+                      .unit__left.text-white.heading-4.text-regular 03.
+                      .unit__body
+                        h6.text-bold.text-white Pilates
+                        p.text-opacity-05 Pilates develops much of what exercisers need — strength, flexibility, muscular endurance etc.
+                  .cell-xs-6.text-sm-left
+                    .unit
+                      .unit__left.text-white.heading-4.text-regular 04.
+                      .unit__body
+                        h6.text-bold.text-white Core Training
+                        p.text-opacity-05 My special Core Training program can help you get even more than simply well-toned muscles.
+  section.section-lg.bg-white
+    .shell
+      h4.text-gray-sec-2.text-regular From my blog
+      h2.text-spacing-0 Latest Articles
+      .range.range-30.range-center
+        .cell-xs-12.cell-sm-10.cell-lg-11.cell-xl-12
+          // Owl Carousel
+          .owl-carousel.owl-carousel-2.owl-carousel-4(data-items='1', data-sm-items='2', data-md-items='2', data-lg-items='3', data-dots='true' data-nav='true' data-stage-padding='15', data-loop='false', data-margin='30', data-mouse-drag="false")
+            .owl-item
+              .thumbnail-blog
+                a(href='single-post.html')
+                  span.icon.icon-xl.thin-icon-book
+                  img(src="images/home-2-5-370x251.jpg", width="370", height="251", alt="")
+                .caption
+                  .unit.unit-middle.unit-horizontal
+                    .unit__left 20#[br]April
+                    .unit__body.text-left
+                      a(href='single-post.html').heading-6.text-bold All about protein diet & supplements
+            .owl-item
+              .thumbnail-blog
+                a(href='single-post.html')
+                  span.icon.icon-xl.thin-icon-camera
+                  img(src="images/home-2-6-370x251.jpg", width="370", height="251", alt="")
+                .caption
+                  .unit.unit-middle.unit-horizontal
+                    .unit__left 15#[br]April
+                    .unit__body.text-left
+                      a(href='single-post.html').heading-6.text-bold Cardio training: its benefits and why it’s so popular
+            .owl-item
+              .thumbnail-blog
+                a(href='single-post.html')
+                  span.icon.icon-xl.thin-icon-camera-web
+                  img(src="images/home-2-7-370x251.jpg", width="370", height="251", alt="")
+                .caption
+                  .unit.unit-middle.unit-horizontal
+                    .unit__left 10#[br]April
+                    .unit__body.text-left
+                      a(href='single-post.html').heading-6.text-bold Yoga classes, nutrition and healthy habits
+            .owl-item
+              .thumbnail-blog
+                a(href='single-post.html')
+                  span.icon.icon-xl.thin-icon-book
+                  img(src="images/home-2-5-370x251.jpg", width="370", height="251", alt="")
+                .caption
+                  .unit.unit-middle.unit-horizontal
+                    .unit__left 20 #[br]April
+                    .unit__body.text-left
+                      a(href='single-post.html').heading-6.text-bold All about protein diet & supplements
+
+        .cell-xs-12
+          a(href="blog.html").button.button-primary.arrow.arrow-right visit my blog
+
+  include ../sections/_counter
+
+
+  // RD Google Map
+  .rd-google-map(class="rd-google-map__model", data-zoom='15', data-y='40.643180', data-x='-73.9874068', data-styles='[{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]}]')
+    ul.map_locations
+      li(data-y='40.643180', data-x='-73.9874068')
+        p
+          | 9870 St Vincent Place, Glasgow, DC 45 Fr 45.
+
+
+  // Page Footer
+  include ../sections/_footer-center
+  //- only on index page
+  block footerLink
+    // {%FOOTER_LINK}

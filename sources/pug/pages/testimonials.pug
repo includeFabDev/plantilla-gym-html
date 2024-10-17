@@ -1,0 +1,71 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-panel
+
+block variables
+  - var activeIndex = 2
+
+block title
+  title Testimonials
+
+block page
+  // Page Header
+  include ../sections/_header-default
+
+  +breadcrumb-classic('images/bg-01.jpg', 'testimonials',
+  {
+    0: {
+      "title": "Home",
+      "href": "./"
+    },
+    1: {
+      "title": "about",
+      "href": "about.html"
+    },
+    2:{
+      "title": "testimonials"
+    }
+  }
+  )
+
+  section.section-md.bg-dark
+    .shell
+      h4.text-gray-sec.text-regular What my clients say
+      h2.text-uppercase testimonials
+      .range.range-30.text-left
+        .cell-sm-6
+          .testimonial-block-type-1(style="background: url('images/testimonials-1-570x500.jpg') center; background-size: cover;")
+            .range.range-left.range-condensed
+              .cell-xs-10.cell-md-9.cell-lg-8
+                p.quote.quote-2
+                  q Derick’s understanding of my personal needs as related to CrossFit, as well as his overall knowledge, insight, and abilities are unparalleled. He has a unique ability to teach the basic skills, as well as the ability to create high level programming specific to each client.
+                p.name.big April Nelson #[br]#[span.text-regular (housewife)]
+        .cell-sm-6
+          .testimonial-block-type-1(style="background: url('images/testimonials-3-570x500.jpg') center; background-size: cover;")
+            .range.range-left.range-condensed
+              .cell-xs-10.cell-md-9.cell-lg-8
+                p.quote.quote-2
+                  q I was quite surprised with a range of services Derick offered me. His group training programs are perfect for beginners. Derick knows a lot about me and my frustrations, limitations, moods, aches and pains.  He still gets me through whatever it is I resist.
+                p.name.big Kate Johnson #[br]#[span.text-regular (actress)]
+        .cell-sm-6
+          .testimonial-block-type-1(style="background: url('images/testimonials-2-570x500.jpg') center; background-size: cover;")
+            .range.range-left.range-condensed
+              .cell-xs-10.cell-md-9.cell-lg-8
+                p.quote.quote-2
+                  q Derick helped me to bounce back and get to the top of my physical shape again! I'm so grateful for all the help he provided! Derick’s magnetic personality ensures that a friendship will inevitably develop throughout the course with a coach.
+                p.name.big Richard Smith #[br]#[span.text-regular (manager)]
+        .cell-sm-6
+          .testimonial-block-type-1(style="background: url('images/testimonials-4-570x500.jpg') center; background-size: cover;")
+            .range.range-left.range-condensed
+              .cell-xs-10.cell-md-9.cell-lg-8
+                p.quote.quote-2
+                  q Derick’s 90 day challenge put me back in the gym on a consistent basis. I eat clean and listen to the advice of coach on every workout. Derick is the perfect combination of tough and warm, and he works with the whole person -- mentally, emotionally and physically. 
+                p.name.big Sara White #[br]#[span.text-regular (housewife)]
+
+
+
+  // Page Footer
+  include ../sections/_footer-default
+
+

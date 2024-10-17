@@ -1,0 +1,44 @@
+extends  ../_skeleton
+
+block variables
+  - var activeIndex = 8
+
+block title
+  title 404
+
+block page
+  // Page Header
+  include ../sections/_header-default
+
+  +breadcrumb-classic('images/bg-01.jpg', '404',
+  {
+    0: {
+      "title": "Home",
+      "href": "./"
+    },
+    1: {
+      "title": "Pages",
+      "href": "#"
+    },
+    2: {
+      "title": "404"
+    }
+  }
+  )
+
+
+  section.section-lg.bg-white
+    .shell
+      h2.text-sm-left.text-spacing-0 404
+      h4.text-sm-left.text-regular Page not found
+      .range.range-left.range-30
+        .cell-md-6.cell-lg-5
+          p.text-sm-left.big The page requested couldn't be found - this could be due to a spelling error in the URL or a removed page.
+        .cell-md-8.text-sm-left
+          a(href='./').button.button-primary.arrow.arrow-right back to homepage
+
+
+
+
+  // Page Footer
+  include ../sections/_footer-default

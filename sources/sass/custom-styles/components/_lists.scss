@@ -1,0 +1,199 @@
+/*
+*
+* Lists
+* --------------------------------------------------
+*/
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list {
+  > li + li {
+    margin-top: 10px;
+  }
+  li {
+    font-family: $font-family-sec;
+    font-weight: 700;
+    color: $primary;
+    a {
+      font-family: $font-family-sec;
+      font-weight: 700;
+      color: $primary;
+    }
+  }
+}
+
+// List inline
+//
+
+.list-inline {
+  margin-left: -5px;
+  margin-right: -5px;
+
+  > li {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+// Description Lists
+//
+
+dl {
+  margin: 0;
+}
+
+// List terms
+//
+
+.list-terms {
+  margin-top: 35px;
+  dt + dd {
+    margin-top: 5px;
+  }
+  dd + dt {
+    margin-top: 25px;
+  }
+}
+
+// List index
+//
+
+.list-index {
+  counter-reset: li;
+
+  li {
+    .list-index-counter {
+      color: $gray-base-sec;
+      &:before {
+        content: counter(li, decimal-leading-zero) ". ";
+        counter-increment: li;
+        font-family: $font-family-sec;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+// List marked
+//
+
+.list-marked,
+.list-marked-type-1,
+.list-marked-dark{
+  li {
+    position: relative;
+    padding-left: 16px;
+
+    &:before {
+      content: '-';
+      display: inline-block;
+      color: $primary;
+      font-family: $font-family-sec;
+      font-weight: 700;
+      position: absolute;
+      left: 0;
+    }
+  }
+  &-arrow {
+    font-family: $font-family-sec;
+    font-weight: 700;
+    li {
+      margin-top: 7px;
+      a{
+        display: block;
+        line-height: 20px;
+      }
+      &:before {
+        position: absolute;
+        left: -5px;
+        top: 1px;
+        content: '\e5cc';
+        font-family: 'Material Icons';
+        font-size: 18px;
+        line-height: 1;
+        color: $gray-darker;
+        transform: translateY(0);
+        opacity: 0;
+        transition: .3s;
+      }
+      &:hover{
+
+        &:before{
+          opacity: 1;
+        }
+      }
+    }
+    &-primary{
+      li{
+        a{
+          &:hover{
+            color: $gray-darker;
+          }
+
+        }
+      }
+    }
+  }
+}
+.list-marked-type-1{
+
+  li{
+    color: $gray-base-sec;
+    font-weight: 400;
+    &:before{
+      color: $gray-base-sec;
+      font-weight: 400;
+    }
+  }
+}
+
+.list-marked-dark{
+
+  li{
+    color: $gray-darker;
+    &:before{
+      color: $gray-darker;
+    }
+  }
+}
+.list-marked-white{
+
+  li{
+    color: $white;
+    &:before{
+      color: $white;
+    }
+  }
+}
+.list-numb{
+  max-width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+  li + li{
+    margin-top: 25px;
+  }
+}
+.list-marked-bold{
+  li{
+    font-weight: 700;
+    &:before{
+      font-weight: 700;
+    }
+  }
+}
+.list-regular{
+  li{
+    font-weight: 400;
+    a{
+      font-weight: 400;
+    }
+  }
+}
+.list-inline-block{
+  display: inline-block;
+}

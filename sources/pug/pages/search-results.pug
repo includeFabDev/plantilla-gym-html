@@ -1,0 +1,48 @@
+extends  ../_skeleton
+
+block variables
+  - var activeIndex = 0
+
+block title
+  title Search results
+
+block page
+  // Page Header
+  include ../sections/_header-default
+
+  +breadcrumb-classic('images/bg-01.jpg', 'search results',
+  {
+    0: {
+      "title": "Home",
+      "href": "./"
+    },
+    1: {
+      "title": "search results"
+    }
+  }
+  )
+
+  //Search results
+  section.section-md
+    .shell
+      h2.text-sm-left.text-spacing-0 Search results
+
+      .range.range-left.range-50
+        .cell-md-9.cell-lg-8
+          // RD Search
+          form.rd-search(action="search-results.html", method="GET", data-search-live="rd-search-results-live")
+            .form-wrap
+              .range.range-spacing-sm-10
+                .cell-sm-9.cell-lg-10
+                  input(class="form-input form-input-search" id="rd-search-form-input" type="text" name="s" autocomplete="off")
+                .cell-sm-3.cell-lg-2
+                  button(type='submit').button.button-primary-2 Search
+        .cell-md-12
+          .rd-search-results
+
+
+
+
+
+  // Page Footer
+  include ../sections/_footer-default

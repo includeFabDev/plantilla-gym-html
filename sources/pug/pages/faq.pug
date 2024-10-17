@@ -1,0 +1,165 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-panel
+
+block variables
+  - var activeIndex = 2
+
+block title
+  title FAQ
+
+block page
+  // Page Header
+  include ../sections/_header-default
+
+  +breadcrumb-classic('images/bg-01.jpg', 'FAQ',
+  {
+    0: {
+      "title": "Home",
+      "href": "./"
+    },
+    1: {
+      "title": "about",
+      "href": "about.html"
+    },
+    2: {
+      "title": "FAQ"
+    }
+  }
+  )
+
+  section.section-lg.bg-white
+    .shell.text-sm-left
+      h4.text-gray-sec.text-regular Some of your questions
+      h2 FAQ
+      .range.range-40.text-left
+        .cell-sm-6
+          .block-faq
+            dl
+              dt How many days per week do I need to work out?
+              dd Depending on your health and fitness goals, you’ll need to commit to a minimum of 3 days of exercise each week to see results. Any fewer than that and each workout will feel like you’re starting all over again each and every time.
+
+          .block-faq
+            dl
+              dt I haven’t done any exercise in a few years. Can I jump straight into personal training?
+              dd Definitely, personal training caters for all fitness levels. Combining personal training sessions with your fitness routine is a great way to blast through barriers and achieve your fitness goals faster.
+
+          .block-faq
+            dl
+              dt What is the best way to pay?
+              dd Unfortunately, I don’t accept credit or debit cards. The most convenient way to pay for your retreat is by bank transfer. It’s the same online payment method you might use to pay a family member, friend or company. It’s simple, quick, secure and trackable.
+        .cell-sm-6
+          .block-faq
+            dl
+              dt Do you provide towels?
+              dd Yes, towels are provided and replaced when needed.
+
+          .block-faq
+            dl
+              dt How do I book my spot?
+              dd Once you register, my team will email you the necessary payment advice, which requires a deposit of $750 to secure your spot on the retreat. Included will be a short booking form for completion of your registration details. Once this initial payment has been cleared, we will email you a confirmation receipt together with any other relevant information. The remaining balance is then due 30 days prior to your retreat start date.
+
+          .block-faq
+            dl
+              dt What happens if I don’t take part in all the activities?
+              dd My programs carry a fixed fee. Once you arrive, everything is covered. Regrettably, there can be no price reductions should you choose to opt out of certain aspects of the program.
+
+  section.section-md.bg-image-4
+    .shell
+      h2.text-spacing-0.text-sm-left.text-white Some of your questions
+      .range.range-40.text-left
+        .cell-sm-6
+          ul.list.list-marked.list-marked-inset-left.big
+            li
+              a(href='#') Do you provide towels?
+            li
+              a(href='#') Do you have wireless internet?
+            li
+              a(href='#') Booking: Is it straightforward?
+            li
+              a(href='#') Who is liable if I have an accident?
+            li
+              a(href='#') What happens if I don’t take part in all the activities?
+            li
+              a(href='#') Which should I do first: CrossFit or yoga?
+        .cell-sm-6
+          ul.list.list-marked.list-marked-inset-left.big
+            li
+              a(href='#') How quickly will I see the results of my training?
+            li
+              a(href='#') Do I need special clothing or footwear?
+            li
+              a(href='#') Are children welcome?
+            li
+              a(href='#') Can I bring a pet?
+            li
+              a(href='#') Why can’t I just do CrossFit?
+            li
+              a(href='#') What should I eat after a workout?
+
+  section.section-md.bg-white
+    .shell
+      h2.text-spacing-0.text-sm-left  All your questions
+      .range.range-40
+        .cell-sm-12
+          // Bootstrap collapse
+          #accordion1.panel-custom-group.text-left(role='tablist', aria-multiselectable='true')
+            +panel({
+              first: true,
+              panelClass: 'panel-custom-default',
+              parentId: 'accordion1',
+              number: '1',
+              header: 'How many days per week do I need to work out?'
+            })
+              p Depending on your health and fitness goals, you’ll need to commit to a minimum of 3 days of exercise each week to see results. Any fewer than that and each workout will feel like you’re starting all over again each and every time.
+
+
+
+            +panel({
+              panelClass: 'panel-custom-default',
+              parentId: 'accordion1',
+              number: '3',
+              header: 'What is the best way to pay?'
+            })
+              p Unfortunately, I don’t accept credit or debit cards. The most convenient way to pay for your retreat is by bank transfer. It’s the same online payment method you might use to pay a family member, friend or company. It’s simple, quick, secure and trackable.
+
+            +panel({
+              panelClass: 'panel-custom-default',
+              parentId: 'accordion1',
+              number: '4',
+              header: 'Do you provide towels?'
+            })
+              p Yes, all towels are provided and replaced when needed.
+
+            +panel({
+              panelClass: 'panel-custom-default',
+              parentId: 'accordion1',
+              number: '5',
+              header: 'How do I book my spot?'
+            })
+              p Once you register, my team will email you the necessary payment advice, which requires a deposit of $750 to secure your spot on the retreat. Included will be a short booking form for completion of your registration details. Once this initial payment has been cleared, we will email you a confirmation receipt together with any other relevant information. The remaining balance is then due 30 days prior to your retreat start date.
+
+            +panel({
+              panelClass: 'panel-custom-default',
+              parentId: 'accordion1',
+              number: '6',
+              header: 'What happens if I don’t take part in all the activities?'
+            })
+              p My programs carry a fixed fee. Once you arrive, everything is covered. Regrettably, there can be no price reductions should you choose to opt out of certain aspects of the program.
+
+
+
+
+
+
+
+
+
+
+
+
+  // Page Footer
+  include ../sections/_footer-default
+
+

@@ -1,0 +1,100 @@
+extends  ../_skeleton
+
+block variables
+  - var activeIndex = 2
+
+block title
+  title Press
+
+block page
+  // Page Header
+  include ../sections/_header-default
+
+  +breadcrumb-classic('images/bg-01.jpg', 'Press',
+  {
+    0: {
+      "title": "Home",
+      "href": "./"
+    },
+    1: {
+      "title": "about",
+      "href": "about.html"
+    },
+    2: {
+      "title": "press"
+    }
+  }
+  )
+
+  section.section-md.bg-white
+    .shell
+      h2.text-spacing-0.text-sm-left Press
+      .range.text-left.range-30
+        .cell-xs-10.cell-sm-6.cell-md-4
+          .press-block
+            a(href='#').text-bold.text-primary When Skechers Shape Ups came out, I was hired as a Spokesperson
+            p Here’s an interview live in a mall with KTLA
+            p.date March 2015
+          .press-block
+            a(href='#').text-bold.text-primary Here’s a story on Balance Training and its amazing benefits
+            p I blogged about it on Huffington Post.
+            p.date April 2015
+          .press-block
+            a(href='#').text-bold.text-primary The home of Derick Mathews
+            p Better Homes & Gardens
+            p.date May 2015
+
+        .cell-xs-10.cell-sm-6.cell-md-4
+          .press-block
+            a(href='#').text-bold.text-primary Research sheds new light on weight training
+            p ABC7 fitness stories.
+            p.date June 2015
+          .press-block
+            a(href='#').text-bold.text-primary Are new intense exercise DVDs right for you?
+            p Home exercise course.
+            p.date July 2015
+          .press-block
+            a(href='#').text-bold.text-primary Top 5 workout techniques
+            p Men’s Health
+            p.date August 2015
+
+        .cell-xs-10.cell-sm-6.cell-md-4
+          .press-block
+            a(href='#').text-bold.text-primary Skinny people might be fat on the inside
+            p How to live in harmony with yourself.
+            p.date September 2015
+          .press-block
+            a(href='#').text-bold.text-primary Rowbike gives riders a total body workout
+            p How to be in tone.
+            p.date October 2015
+
+  section.bg-dark.section-md.bg-image-3
+    .shell
+      h2.text-spacing-0.text-center Videos
+      .range
+        .cell-xs-12
+          // Owl Carousel
+
+          .owl-carousel.owl-carousel-2(data-items='1', data-md-items='2',  data-dots='true' data-nav='true' data-stage-padding='15', data-loop='false', data-margin='30', data-mouse-drag="false")
+            .owl-item
+              .block-video.text-md-left
+                .entry-video.embed-responsive.embed-responsive-16by9
+                  iframe(width='571', height='394', src='//www.youtube.com/embed/dJlFmxiL11s', class='embed-responsive-item')
+                a(href='https://www.youtube.com/watch?v=dJlFmxiL11s').text-md-left Clutch Life: Tips from a 24/7 Fitness Trainer
+
+            .owl-item
+              .block-video.text-md-left
+                .entry-video.embed-responsive.embed-responsive-16by9
+                  iframe(width='571', height='394', src='//www.youtube.com/embed/8MPb0O9xApA', class='embed-responsive-item')
+                a(href='https://www.youtube.com/watch?v=8MPb0O9xApA').text-md-left 30 Minute at Home Strength Workout
+            .owl-item
+              .block-video.text-md-left
+                .entry-video.embed-responsive.embed-responsive-16by9
+                  iframe(width='571', height='394', src='//www.youtube.com/embed/dJlFmxiL11s', class='embed-responsive-item')
+                a(href='https://www.youtube.com/watch?v=dJlFmxiL11s').text-md-left Clutch Life: Tips from a 24/7 Fitness Trainer
+
+
+  // Page Footer
+  include ../sections/_footer-default
+
+

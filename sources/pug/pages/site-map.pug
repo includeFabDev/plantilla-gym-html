@@ -1,0 +1,143 @@
+extends  ../_skeleton
+
+
+
+
+block variables
+  - var activeIndex = 8
+
+block title
+  title Site map
+
+block page
+  // Page Header
+  include ../sections/_header-default
+
+  +breadcrumb-classic('images/bg-01.jpg', 'site map',
+  {
+    0: {
+      "title": "Home",
+      "href": "./"
+    },
+    1: {
+      "title": "Pages",
+      "href": "#"
+    },
+    2: {
+      "title": "site map"
+    }
+  }
+  )
+
+
+  section.section-md.text-md-left
+    .shell.sitemap-box
+      h2 Site map
+      .range.text-left.range-50.text-center.text-xs-left
+        .cell-xs-6.cell-sm-6.cell-md-3
+          p.text-gray-darker.text-bold.font-accent
+            a(href='index.html').text-gray-darker Home
+          .range.range-50
+            .cell-xs-12
+              p.text-gray-darker.text-bold.font-accent
+                a(href='about.html').text-gray-darker About
+              ul.list-marked.list-marked-arrow.text-regular.list-inline-block.list-marked-arrow-primary
+
+                li
+                  a(href='overview.html') Overview
+                li
+                  a(href='testimonials.html') Testimonials
+                li
+                  a(href='press.html') Press
+                li
+                  a(href='faq.html') FAQ
+            .cell-xs-12
+              p.text-gray-darker.text-bold.font-accent
+                a(href='my-books.html').text-gray-darker My books
+              ul.list-marked.list-marked-arrow.text-regular.list-inline-block.list-marked-arrow-primary
+                li
+                  a(href='single-book.html') Single book
+
+
+
+        .cell-xs-6.cell-sm-6.cell-md-3
+          p.text-gray-darker.text-bold.font-accent   Pages 1
+          ul.list-marked.list-marked-arrow.text-regular.list-inline-block.list-marked-arrow-primary
+            li
+              a(href='typography.html') Typography
+            li
+              a(href='tabs-and-accordions.html') Tabs & Accordions
+            li
+              a(href='progress-bars.html') Progress bars
+            li
+              a(href='tables.html') Tables
+            li
+              a(href='forms.html') Forms
+            li
+              a(href='buttons.html') Buttons
+            li
+              a(href='grid.html') Grid
+          .range.range-50
+            .cell-xs-12
+              p.text-gray-darker.text-bold.font-accent
+                a(href='blog.html').text-gray-darker Blog
+              ul.list-marked.list-marked-arrow.text-regular.list-inline-block.list-marked-arrow-primary
+                li
+                  a(href='single-post.html') Single post
+
+        .cell-xs-6.cell-sm-6.cell-md-3
+          p.text-gray-darker.text-bold.font-accent
+            a(href='coaching.html').text-gray-darker Coaching
+          ul.list-marked.list-marked-arrow.text-regular.list-inline-block.list-marked-arrow-primary
+
+            li
+              a(href='adult-programs.html') Adult programs
+            li
+              a(href='one-to-one.html') One-to-one
+          .range.range-50
+            .cell-xs-12
+              p.text-gray-darker.text-bold.font-accent Pages 2
+              ul.list-marked.list-marked-arrow.text-regular.list-inline-block.list-marked-arrow-primary
+                li
+                  a(href='media.html') Media
+                li
+                  a(href='grid-gallery.html') Grid gallery
+                li
+                  a(href='team.html') Team
+                li
+                  a(href='single-member.html') Single member
+
+            .cell-xs-12
+              p.text-gray-darker.text-bold.font-accent
+                a(href='hire-me.html').text-gray-darker Hire Me
+
+
+        .cell-xs-6.cell-sm-6.cell-md-3
+          p.text-gray-darker.text-bold.font-accent  Pages 3
+          ul.list-marked.list-marked-arrow.text-regular.list-inline-block.list-marked-arrow-primary
+
+            li
+              a(href='404.html') 404 page
+            li
+              a(href='503.html') 503 page
+            li
+              a(href='maintenance.html') Maintenance (Under Construction)
+            li
+              a(href='coming-soon.html') Coming Soon
+            li
+              a(href='site-map.html') Site Map
+            li
+              a(href='privacy-policy.html') Privacy Policy
+          .range.range-50
+            .cell-xs-12
+              p.text-gray-darker.text-bold.font-accent
+                a(href='contacts.html').text-gray-darker Contacts
+
+
+
+
+
+
+  // Page Footer
+  include ../sections/_footer-default
+

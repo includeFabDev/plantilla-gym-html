@@ -1,0 +1,141 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-panel
+
+block variables
+  - var activeIndex = 3
+
+block title
+  title Coaching
+
+block page
+  // Page Header
+  include ../sections/_header-default
+
+  +breadcrumb-classic('images/bg-01.jpg', 'Coaching',
+  {
+    0: {
+      "title": "Home",
+      "href": "./"
+    },
+    1: {
+      "title": "Coaching"
+    }
+  }
+  )
+
+  section.section-md.bg-white.bg-image-7
+    .shell
+      h2.text-spacing-0.text-md-left One-to-one training
+      .range.text-left.range-sm-left.range-30
+        .cell-sm-12.cell-lg-9
+          p.big With over 20 years of private training experience, I can help you
+        .cell-sm-12.cell-lg-9
+          ul.list.list-marked.list-marked-dark.list-marked-inset-left.big
+            li Get back into shape after a long break, injury or child birth
+            li Reduce body fat and create lean body mass
+            li Improve core strength, (which helps firm and flatten the belly) plus reduce lower back pain
+            li Rehab from many spine injuries & conditions, improve balance & agility, prevent injury
+            li Make a total lifestyle change and create long-lasting healthy habits
+            li Motivate and inspire you to get fit and stay that way at any age!
+        .cell-sm-12
+          a(href='one-to-one.html').button.button-primary.arrow.arrow-right read more
+
+  section.bg-primary
+    .shell
+      .range.range-0.range-justify.range-md-condensed
+        .cell-md-6.section-md.text-left
+          div
+          .range.range-30.range-xs-left
+            .cell-xs-10.cell-md-10.cell-lg-11
+              h2.text-spacing-0.text-white Junior program
+              p.big.text-opacity-05 I offer CrossFit classes and programs for all ages, not just adults. My competent staff of trained professionals did their research to gather technology to create this amazing new program. My curriculum for kids nurtures the hearts, minds and bodies of our most valuable assets.
+            .cell-xs-10.cell-md-10.cell-lg-11
+              ul.list.list-marked.list-marked-white
+                li Spinning / Indoor Cycling
+                li Fit-Kids
+                li Pilates
+                li Sport  Foundation
+                li  User Group Training for weight loss
+            .cell-xs-10.cell-md-10.cell-lg-10
+              a(href='#').button.button-primary-3.arrow.arrow-right read more
+        .cell-md-6.section-md.text-left.bg-fullwidth-wrap
+          .bg-image-9.bg-fullwidth.bg-fullwidth-right
+
+          .range.range-30.range-md-right.range-xs-left
+            .cell-xs-10.cell-md-10.cell-lg-10
+              h2.text-spacing-0.text-white Adult program
+              p.big.text-opacity-05 Working with me as your own trainer during Adult fitness program is going to be the answer to all your fitness goals. When you work with a qualified personal trainer, every minute is spent to making you better. You don’t get just another training session.
+            .cell-xs-10.cell-md-10.cell-lg-10
+              ul.list.list-marked.list-marked-white
+                li Spinning / Indoor Cycling
+                li Boot Camps / Metabolic Conditioning / Interval Training
+                li Pilates and Barre workouts
+                li Core/Low Back strengthening
+                li User Group Training for weight loss
+            .cell-xs-10.cell-md-10.cell-lg-10
+              a(href='adult-programs.html').button.button-white.arrow.arrow-right read more
+
+  section.section-md.bg-white
+    .shell
+      h4.text-gray-sec.text-regular Purchase any program with up to six months of support
+      h2 Pricing plans
+      .range.range-center.range-30
+        .cell-sm-6.cell-md-4
+          a(href='#').pricing-box
+            .pricing-body
+              .pricing-header
+                h6 one month
+                h2 #[span.heading-4 $]50
+                p One-month support plan
+              p Includes One Month membership to#[br]The Fitness Club
+              .divider
+              p Monthly Payment of $10.00 (after 30 days)
+              .divider
+              p You can cancel at anytime
+            .pricing-footer.bg-primary
+              .button.button-primary-3.button-xs.arrow.arrow-right sign up
+        .cell-sm-6.cell-md-4
+          a(href='#').pricing-box
+            .pricing-body
+              .pricing-header
+                h6 three months
+                h2 #[span.heading-4 $]80
+                p Three-month support plan
+              p Includes Three Month membership to#[br]The Fitness Club
+              .divider
+              p Monthly Payment of $30.00 (after three months)
+              .divider
+              p You can cancel at anytime
+            .pricing-footer.bg-primary
+              .button.button-primary-3.button-xs.arrow.arrow-right sign up
+        .cell-sm-6.cell-md-4
+          a(href='#').pricing-box
+            .pricing-body
+              .pricing-header
+                h6 premium package
+                h2 #[span.heading-4 $]100
+                p Full Personal Coaching
+              p Custom Meal Plans
+              .divider
+              p Skype Consultations
+              .divider
+              p You can cancel at anytime
+            .pricing-footer.bg-primary
+              .button.button-primary-3.button-xs.arrow.arrow-right sign up
+
+
+
+
+
+
+
+
+
+
+
+  // Page Footer
+  include ../sections/_footer-default
+
+

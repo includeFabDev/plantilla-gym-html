@@ -1,0 +1,76 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-table-custom
+
+block variables
+  - var activeIndex = 8
+
+block title
+  title Tables
+
+block page
+  // Page Header
+  include ../sections/_header-default
+
+  +breadcrumb-classic('images/bg-01.jpg', 'tables',
+  {
+    0: {
+      "title": "Home",
+      "href": "./"
+    },
+    1: {
+      "title": "Pages",
+      "href": "#"
+    },
+    2: {
+      "title": "tables"
+    }
+  }
+  )
+
+  // Hover Row Table
+  section.section-md.bg-white
+    .shell
+      h2.text-uppercase.text-md-left tables
+      p.text-md-left.big Tables have always been perfect for displaying facts #[br.veil.reveal-md-inline]and numbers. Now you can benefit from using them on your website
+
+      .range.range-xs-center
+        .cell-sm-10.cell-md-12
+          +table-custom([
+            ['Column 1', 'Column 2', 'Column 3', 'Column 4'],
+            ['Item#1 ', 'Description', 'Subtotal:', '$1.00'],
+            ['Item#2 ', 'Description', 'Discount:', '$2.00'],
+            ['Item#3 ', 'Shipping', 'Subtotal:', '$3.00'],
+            ['Item#4 ', 'Description', 'Tax:', '$4.00'],
+            ['All Items ', 'Description', 'Your total:', '$10.00']],
+          "table-fixed bordered-table", true)
+
+      .range.range-xs-center
+        .cell-sm-10.cell-md-12
+          +table-custom([
+            ['Column 1', 'Column 2', 'Column 3', 'Column 4'],
+            ['Item#1 ', 'Description', 'Subtotal:', '$1.00'],
+            ['Item#2 ', 'Description', 'Discount:', '$2.00'],
+            ['Item#3 ', 'Shipping', 'Subtotal:', '$3.00'],
+            ['Item#4 ', 'Description', 'Tax:', '$4.00'],
+            ['All Items ', 'Description', 'Your total:', '$10.00']],
+          "table-gray table-fixed", true)
+
+      .range.range-xs-center
+        .cell-sm-10.cell-md-12
+          +table-custom([
+            ['Column 1', 'Column 2', 'Column 3', 'Column 4'],
+            ['Item#1 ', 'Description', 'Subtotal:', '$1.00'],
+            ['Item#2 ', 'Description', 'Discount:', '$2.00'],
+            ['Item#3 ', 'Shipping', 'Subtotal:', '$3.00'],
+            ['Item#4 ', 'Description', 'Tax:', '$4.00'],
+            ['All Items ', 'Description', 'Your total:', '$10.00']],
+          "table-primary table-fixed", true)
+
+
+
+
+
+  // Page Footer 
+  include ../sections/_footer-default

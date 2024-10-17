@@ -1,0 +1,53 @@
+/*
+*
+* Breadcrumbs
+* --------------------------------------------------
+*/
+
+//== Breadcrumbs variables
+//
+//##
+
+$bread-color: $white;
+$bread-active-color: $white;
+
+.breadcrumb-wrapper {
+  padding-top: 60px;
+  padding-bottom: 50px;
+
+  @media (min-width: $screen-sm-min){
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+
+}
+
+.breadcrumb-custom {
+  margin-top: 20px;
+  list-style: none;
+  letter-spacing: .15em;
+
+  > li {
+    display: inline-block;
+    color: $bread-active-color;
+    font-size: 18px;
+    font-family: $font-family-sec;
+    text-transform: uppercase;
+    font-weight: 700;
+
+    > a {
+      color: $bread-color;
+
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    + li:before {
+      padding: 0 8px 0 5px;
+      content: "/";
+      color: $bread-color;
+    }
+  }
+}

@@ -1,0 +1,87 @@
+extends  ../_skeleton
+
+block variables
+	- var activeIndex = 6
+
+block title
+	title Contacts
+
+block page
+	// Page Header
+	include ../sections/_header-default
+
+	+breadcrumb-classic('images/bg-01.jpg', 'Contacts',
+  {
+    0: {
+      "title": "Home",
+      "href": "./"
+    },
+    1: {
+      "title": "Contacts"
+    }
+  }
+	)
+
+	section.section-lg.bg-white
+		.shell
+			h2.text-sm-left.text-spacing-0 Contacts
+			.range.range-sm-reverse
+				.cell-md-7.cell-lg-6.cell-lg-preffix-1
+					.range.range-20.range-center.text-sm-left
+						.cell-xs-10.cell-sm-4
+							address
+								dl
+									dt.text-gray-darker.text-bold.font-accent 227 Marion Street
+									dd Columbia, SC 29201
+						.cell-xs-10.cell-sm-4
+							dl
+								dt.text-gray-darker.text-bold.font-accent Mon - Sat 8.00 - 18.00
+								dd Sunday CLOSED
+						.cell-xs-10.cell-sm-4
+							div
+								a(href='callto:#').text-bold.text-gray-darker.font-accent #[span.text-gray-sec 1 (800)] 123 1234
+							div
+								a(href='callto:#').text-bold.text-gray-darker.font-accent #[span.text-gray-sec 1 (800)] 123 1235
+					.range
+						.cell-xs-12
+							h4.text-sm-left Get in touch
+							form.rd-mailform.text-left(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+								.range.range-10.form-wrap.range-spacing-sm-10
+									.cell-sm-6
+										.form-wrap
+											label.form-label(for="contact-name") First name
+											input#contact-name.form-input(type="text" name="name" data-constraints='@Required')
+									.cell-sm-6
+										.form-wrap
+											label.form-label(for="contact-name-2") Last name
+											input#contact-name-2.form-input(type="text" name="name-2" data-constraints=" @Required")
+								.form-wrap
+									label.form-label(for="contact-message") Message
+									textarea#contact-message.form-input(name="message" data-constraints="@Required")
+
+								.range.range-10.form-wrap.range-spacing-sm-10
+									.cell-sm-12.cell-md-12.cell-lg-7
+										.form-wrap
+											label.form-label(for="contact-email") E-Mail
+											input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+									.cell-sm-12.cell-md-12.cell-lg-5
+										.form-button.text-center.text-lg-left
+											button(type="submit").button.button-block.button-primary-2.text-spacing-0.button-md Send a message
+				.cell-md-5.cell-lg-5
+
+					// RD Google Map
+					.rd-google-map(class="rd-google-map__model", data-zoom='15', data-y='40.643180', data-x='-73.9874068', data-styles='[{"featureType":"water","elementType":"geometry","stylers":[{"color":"#e9e9e9"},{"lightness":17}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#ffffff"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":16}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":21}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#dedede"},{"lightness":21}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":16}]},{"elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#333333"},{"lightness":40}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#f2f2f2"},{"lightness":19}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#fefefe"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#fefefe"},{"lightness":17},{"weight":1.2}]}]')
+						ul.map_locations
+							li(data-y='40.643180', data-x='-73.9874068')
+								p
+									| 9870 St Vincent Place, Glasgow, DC 45 Fr 45.
+
+
+
+
+
+	// Page Footer
+	include ../sections/_footer-default
+
+
+

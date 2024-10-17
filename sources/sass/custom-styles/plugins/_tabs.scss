@@ -1,0 +1,179 @@
+/*
+*
+* Tabs
+* --------------------------------------------------
+*/
+
+
+//== Tabs variables
+//
+//##
+
+// Base
+$tabs-color: $primary;
+$tabs-background: #eaeaea;
+$tabs-font: 400 14px/24px $font-family-sec;
+$tabs-padding: 11px 35px;
+
+// Horizontal tabs
+$tabs-horizontal-active-color: $white;
+$tabs-horizontal-active-background: #eaeaea;
+$tabs-horizontal-background: transparent;
+
+// Vertical tabs
+$tabs-vertical-active-color: $gray-darker;
+$tabs-vertical-active-line: $gray-darker;
+
+
+
+// Base styles
+//--------------------------------------
+
+.tabs-custom {
+  .nav-custom {
+    &> li, &> li > a {
+      display: block;
+      position: relative;
+    }
+  }
+
+  .nav-custom-tabs {
+    font-size: 0;
+    line-height: 0;
+
+    li {
+      margin: -1px 0;
+
+      &+ li {
+        margin-top: 7px;
+
+        @media (min-width: $screen-sm-min) {
+          margin-top: 0;
+          margin-left: 9px;
+        }
+      }
+    }
+  }
+}
+
+.tabs-custom {
+  .nav-custom-tabs {
+    li a {
+      position: relative;
+      padding: $tabs-padding;
+      font: $tabs-font;
+      color: $tabs-color;
+      border: 2px solid;
+      text-align: center;
+      text-transform: uppercase;
+      vertical-align: middle;
+      transition: .3s all ease;
+      letter-spacing: .15em;
+    }
+
+    li a:hover,
+    li.active a {
+      color: $gray-darker;
+      background: $tabs-background;
+      border-color: $tabs-background;
+    }
+  }
+}
+
+.tab-content {
+  padding-top: 20px;
+
+  @media (min-width: $screen-sm-min) {
+    padding-top: 32px;
+  }
+}
+
+
+// Horizontal tabs
+//--------------------------------------
+
+.tabs-custom {
+  &.tabs-horizontal {
+    @media (min-width: $screen-sm-min) {
+      .nav-custom-tabs {
+        position: relative;
+        margin-top: 20px;
+        @include justify-content(flex-start);
+        @include display-flex;
+
+        li a {
+          display: block;
+        }
+
+
+      }
+    }
+  }
+}
+
+
+// Vertical tabs
+//--------------------------------------
+
+.tabs-custom {
+  &.tabs-vertical {
+    @media (min-width: $screen-sm-min) {
+      margin-top: 20px;
+      @include display-flex;
+      @include flex-direction(row);
+      @include flex-wrap(nowrap);
+      @include align-items(stretch);
+
+      .nav-custom-tabs {
+        @include display-flex;
+        @include flex-direction(column);
+        @include flex-wrap(nowrap);
+        @include align-items(stretch);
+        @include flex-shrink(0);
+        max-width: 50%;
+      }
+
+      .tab-content {
+        @include flex-grow(1);
+      }
+
+      .nav-custom-tabs {
+        text-align: right;
+
+        li + li {
+          margin-top: 12px;
+          margin-left: 0;
+        }
+
+        li a {
+          display: block;
+          padding: 11px 20px;
+          text-align: left;
+
+        }
+
+        li a:hover,
+        li.active a {
+          color: $tabs-vertical-active-color;
+        }
+      }
+
+      .tab-content {
+        padding: 0 0 0 30px;
+      }
+    }
+
+    @media (min-width: $screen-lg-min) {
+      .nav-custom-tabs {
+        min-width: 170px;
+      }
+    }
+  }
+}
+
+
+.page {
+  .tabs-custom-wrap + .range {
+    margin-top: 0;
+  }
+}

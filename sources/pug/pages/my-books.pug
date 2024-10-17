@@ -1,0 +1,91 @@
+extends  ../_skeleton
+
+
+
+
+block variables
+  - var activeIndex = 4
+
+block title
+  title My Books
+
+block page
+  // Page Header
+  include ../sections/_header-default
+
+  +breadcrumb-classic('images/bg-01.jpg', 'My Books',
+  {
+    0: {
+      "title": "Home",
+      "href": "./"
+    },
+    1: {
+      "title": "my books"
+    }
+
+  }
+  )
+
+  section.section-md.bg-white 
+    .shell.text-sm-left
+      h2 My books
+      .range.range-60.range-center.range-md-left
+        .cell-xs-10.cell-sm-6.cell-md-4
+          .books-item
+            a(href='single-book.html').img-link
+              img(src="images/book-1-370x436.jpg", width="370", height="436", alt="")
+            p If someone tells you there is a secret to calisthenics, run as far as you can. There are none. There are none in fitness too and 80% of results will always come down to actually doing the work. It took me years to stop searching for a secret source.
+
+            p.price.text-bold #[span.heading-4 $25.90] on
+
+            a(href='#').button.button-transparent.arrow.arrow-right.button-img
+              img(src="images/amazon.jpg", alt="")
+        .cell-xs-10.cell-sm-6.cell-md-4
+          .books-item
+            a(href='single-book.html').img-link
+              img(src="images/book-2-370x436.jpg", width="370", height="436", alt="")
+            p Losing weight—and keeping the pounds off—isn't a quick or easy process, but a few simple diet tricks can be a big help along the way. My favorites? Eating lots of protein, fiber, and healthy carbs, which boost your metabolism.
+
+            p.price.text-bold #[span.heading-4 $30.90] on
+
+            a(href='#').button.button-transparent.arrow.arrow-right.button-img
+              img(src="images/amazon.jpg", alt="")
+        .cell-xs-10.cell-sm-6.cell-md-4
+          .books-item
+            a(href='single-book.html').img-link
+              img(src="images/book-3-370x436.jpg", width="370", height="436", alt="")
+            p Fitness coaching is a tough industry. When I first started I would sometimes have a client at 6am, do a day shift as a fitness consultant and have maybe three clients in the evening. I was shattered by the end of the day.
+
+            p.price.text-bold #[span.heading-4 $24.80] on
+
+            a(href='#').button.button-transparent.arrow.arrow-right.button-img
+              img(src="images/amazon.jpg", alt="")
+
+        .cell-xs-10.cell-sm-6.cell-md-4
+          .books-item
+            a(href='single-book.html').img-link
+              img(src="images/book-4-370x436.jpg", width="370", height="436", alt="")
+
+            p There are countless workout styles you've probably heard about over the years, and all of them are meant to help you reach your fitness goals. If you're looking for a new program to add to your routine, you may want to give Tabata try.
+
+            p.price.text-bold #[span.heading-4 $25.90] on
+
+            a(href='#').button.button-transparent.arrow.arrow-right.button-img
+              img(src="images/amazon.jpg", alt="")
+        .cell-xs-10.cell-sm-6.cell-md-4
+          .books-item
+            a(href='single-book.html').img-link
+              img(src="images/book-5-370x436.jpg", width="370", height="436", alt="")
+            p Many athletes have a large part of their daily diets that consist of fish and seafood. The reason is obviously quite simple - protein. Read my book on fish types, benefits of Omega 3 & 6 fats, and mercury levels!
+
+            p.price.text-bold #[span.heading-4 $25.90] on
+
+            a(href='#').button.button-transparent.arrow.arrow-right.button-img
+              img(src="images/amazon.jpg", alt="")
+
+            
+
+
+  // Page Footer
+  include ../sections/_footer-default
+

@@ -1,0 +1,80 @@
+/*
+*
+* Footers
+* --------------------------------------------------
+*/
+
+
+// Footer-transparent
+// -------------------------
+.footer-transparent,
+.footer-center{
+  font-family: $font-family-sec;
+
+  dd{
+    font-family: $font-family-base;
+  }
+
+  a{
+    display: inline-block;
+    transition: 250ms all ease-in-out;
+    .icon{
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+  }
+  .icon{
+    font-size:20px;
+    @media (min-width: $screen-sm-min) {
+      font-size: 36px;
+    }
+  }
+}
+.footer-center{
+
+  .brand-name{
+    display: inline-block;
+  }
+
+  a{
+    display: block;
+    transition: 250ms all ease-in-out;
+    .icon{
+      vertical-align: middle;
+      margin-right: 5px;
+      &.fa-linkedin{
+        vertical-align: bottom;
+      }
+    }
+    @media (min-width: $screen-lg-min){
+      display: inline-block;
+    }
+  }
+  a[href*='callto']{
+    &:hover{
+      color: $primary;
+    }
+    @media (min-width: $screen-lg-min){
+      display: inline-block;
+    }
+
+  }
+}
+
+// Footer-static
+// -------------------------
+.footer-static{
+  .bg-gray-3{
+    @media (min-width: $screen-lg-min){
+      box-shadow: 2px 0px 1px 0px rgba(0,0,0,0.1);
+      position: relative;
+      z-index: 2;
+    }
+  }
+  p{
+    padding: 0 15px;
+    @media (min-width: $screen-md-min){
+      padding: 0;
+    }
+  }
+}

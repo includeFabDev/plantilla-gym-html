@@ -1,0 +1,63 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-panel
+
+block variables
+  - var activeIndex = 3
+
+block title
+  title One-to-one
+
+block page
+  // Page Header
+  include ../sections/_header-default
+
+  +breadcrumb-classic('images/bg-01.jpg', 'one-to-one',
+  {
+    0: {
+      "title": "Home",
+      "href": "./"
+    },
+    1: {
+      "title": "Coaching",
+      "href": "coaching.html"
+    },
+    2:{
+      "title": "one-to-one"
+    }
+  }
+  )
+
+  section.section-md.bg-white
+    .shell
+      h2.text-spacing-0.text-md-left One-to-one training
+      .range.text-left.range-20
+        .cell-sm-6
+          p.heading-6.big The combination of specialist personal training, physiotherapy, nutritional assessments and programming makes this service UNIQUE. Everything, including where I train, is built around you.
+          h4 #[span.big.text-gray-sec 01.] Who is it suitable for?
+          p People often see my testimonial page and assume I only work with celebrities, which is simply not the case. I  train clients of all ages, of all fitness levels, and I can always find a package that works for you.
+          p.text-gray-darker I help some clients completely transform their body, whilst others are focused on rehabilitation after an injury. Lots of my clients are focused on losing weight, whether that be several stone or just a few pounds for a wedding or the summer, whereas others simply want to keep fit and healthy. Everyone has different goals and ambitions. My programs are set up to tailor to the individual and get the best out of everyone.
+        .cell-sm-6
+          p I will help you look & feel in the best shape of your life. As a highly qualified and award-winning personal fitness coach, I see my goal in training my clients and giving them the best possibilities to improve their bodies. With my one-to-one training and professionalism this is absolutely possible!
+          img(src="images/home-1-5-570x440.jpg", width="570", height="440", alt="")
+      .range.text-left
+        .cell-sm-6
+          h4 #[span.big.text-gray-sec 02.] Where will we train?
+          p If privacy is very important to you, and you want to maximize the time you have available to train, then I can bring all the equipment to you and train you in the privacy of your own home or outside in your local park.
+          p You don’t need a home gym or a huge amount of space. A small room or garden is all we need. Sessions are booked around your schedule, whether that be early morning, late in the evening, or on a lunch break at work. You will maximize your available time, whilst receiving the ultimate bespoke personal training service.
+        .cell-sm-6
+          h4 #[span.big.text-gray-sec 03.]What’s first?
+          p The process starts with a biomechanical and physiotherapy assessment. This isn’t as daunting as it sounds. It’s just a way of testing your strengths and weaknesses, as well as assessing your goals.
+          p You will also have a nutritional assessment which results in a personal nutrition plan being written specifically for you.Your success will be achieved through an intelligent combination of nutrition, lifestyle, and training. Every element of the plan is sensible, researched and proven to work. My Body Blueprint approach brings it all together.
+      .range
+        .cell-xs-12
+          a(href='#').button.button-primary.arrow.arrow-right sign up now
+
+
+
+
+  // Page Footer
+  include ../sections/_footer-default
+
+

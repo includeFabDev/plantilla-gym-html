@@ -1,0 +1,105 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-panel
+
+block variables
+  - var activeIndex = 3
+
+block title
+  title Adult programs
+
+block page
+  // Page Header
+  include ../sections/_header-default
+
+  +breadcrumb-classic('images/bg-01.jpg', 'adult programs',
+  {
+    0: {
+      "title": "Home",
+      "href": "./"
+    },
+    1: {
+      "title": "Coaching",
+      "href": "coaching.html"
+    },
+    2: {
+      "title": "adult programs"
+    }
+  }
+  )
+
+  section.section-md.bg-image-14.bg-white
+    .shell
+      h2.text-spacing-0.text-md-left Adult programs
+
+      .range.text-left.range-30.range-center.range-sm-left
+        .cell-xs-10.cell-sm-8.cell-md-6
+          p.heading-6.big Working with me is going to be the answer to all your fitness goals. When you work with me as your own personal trainer, I dedicate every minute to making you better. You don’t get just another session with your own fitnes trainer. You get a full, PERSONALIZED custom program to fit your current abilities.
+          .range.range-30
+            .cell-xs-12
+              p.text-bold.font-accent #[span.text-gray-sec 01.] #[span.big.text-gray-darker Goals]
+              p.text-gray-darker I will set out exactly what it is that you hope to achieve from this program. That may be a specific weight, a specific look, a health or fitness goal, or all of the above.
+            .cell-xs-12
+              p.text-bold.font-accent #[span.text-gray-sec 02.] #[span.big.text-gray-darker Restraints ]
+              p When and where you are able to train, dietary requirements or considerable work and family commitments are all taken into consideration. Essentially the aim is to cover all angles to ensure that what’s provided in terms of programme design for training and diet is realistic, effective and maintainable throughout.
+            .cell-xs-12
+              p.text-bold.font-accent #[span.text-gray-sec 03.] #[span.big.text-gray-darker Training ]
+              p Relevant training history, including any previous or current injuries, as well as training experience and capabilities will be discussed.
+
+
+  section.section-md.bg-white
+    .shell
+      h2.text-spacing-0.text-md-left Class schedule
+      .range.range-30.range-center.text-left
+        .cell-xs-6.cell-sm-4.cell-lg-2
+          p.font-accent.big.text-gray-darker Monday
+          p.text-primary.font-accent.text-bold HitFit
+          ul
+            li 6am - Boxing Bootcamp
+            li 7am - TRX Circuit Training
+        .cell-xs-6.cell-sm-4.cell-lg-2
+          p.font-accent.big.text-gray-darker Tuesday
+          p.text-primary.font-accent.text-bold HitFit
+          ul
+            li 6am - Boxing Bootcamp
+            li 7am - TRX Circuit Training
+            li 4:30pm - #[span.text-bold.font-accent.text-primary Pilates]
+            li 6pm - #[span.text-bold.font-accent.text-primary Pilates]
+        .cell-xs-6.cell-sm-4.cell-lg-2
+          p.font-accent.big.text-gray-darker Wednesday
+          p.text-primary.font-accent.text-bold 1625 Bush St.
+          ul
+            li 6am/7am - Performance
+            li Movement Bootcamp
+        .cell-xs-6.cell-sm-4.cell-lg-2
+          p.font-accent.big.text-gray-darker Thursday
+          p.text-primary.font-accent.text-bold HitFit
+          ul
+            li 6am - Boxing Bootcamp
+            li 7am - TRX Circuit Training
+            li 5pm - TRX Circuit Training
+            li 6pm - Intermediate Boxing
+        .cell-xs-6.cell-sm-4.cell-lg-2
+          p.font-accent.big.text-gray-darker Friday
+          p.text-primary.font-accent.text-bold 1625 Bush St.
+          ul
+            li 6am/7am - Performance
+            li Movement Bootcamp
+        .cell-xs-6.cell-sm-4.cell-lg-2
+          p.font-accent.big.text-gray-darker Saturday
+          p.text-primary.font-accent.text-bold HitFit
+          ul
+            li 6am/7am - Performance
+            li Movement Bootcamp
+
+
+
+
+
+
+
+  // Page Footer
+  include ../sections/_footer-default
+
+

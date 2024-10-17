@@ -1,0 +1,137 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-panel
+
+block variables
+  - var activeIndex = 2
+
+block title
+  title About
+
+block page
+  // Page Header
+  include ../sections/_header-default
+
+  +breadcrumb-classic('images/bg-01.jpg', 'About',
+  {
+    0: {
+      "title": "Home",
+      "href": "./"
+    },
+    1: {
+      "title": "about"
+    }
+  }
+  )
+
+  section.section-md.bg-image-5
+    .shell.text-sm-left
+      h4.text-gray-sec.text-regular Information about me
+      h2.text-white.text-spacing-0 Overview
+      .range.range-md-left.range-50
+        .cell-lg-10
+          p.big My definition of training is: “making your MIND comfortable with the fact that your BODY is going to be a little uncomfortable”. People who don’t like to exercise usually just don’t like to be uncomfortable, but getting out of our comfort zones – mentally or physically – is where positive change happens. Nobody improves while sitting under a warm fuzzy blanket. My specialty is helping people to get out of their comfort zones whether it’s for a minute or an hour. I can’t make someone want to get stronger, leaner or fitter, but if they want to do it, I’m with them all the way!
+        .cell-lg-10
+          .range.range-50
+            .cell-sm-6
+              h4.text-white.text-regular My Message
+              p If I can get this fit, so can most anyone. If you look at me and think I’ve never struggled with my weight or that I’ve been fit and athletic my whole life, you’d be completely wrong! From 16 – 22, when I should’ve been in the best shape of my life, I was 20 to 25 lbs. heavier than I am now.
+            .cell-sm-6
+              h4.text-white.text-regular My Challenge
+              p I do not consider myself genetically blessed. I don’t have the perfect set of genes. What I do have is a lot of stubbornness and a little OCD. According to all my doctors, I should not be able to do what I do. I should not be able to perform at the level I do and I should be in chronic pain.
+            .cell-sm-12
+              a(href='overview.html').button.button-white.arrow.arrow-right.text-white read more
+
+  section.section-lg.bg-primary
+    .shell
+      h4.text-white.text-regular TV, press, blogs
+      h2.text-spacing-0.text-white Media
+      .range.range-50
+        .cell-sm-12
+          // Owl Carousel
+          .owl-carousel.owl-carousel-2.owl-carousel-3.nav-center(data-items='1', data-sm-items='2', data-md-items='3',  data-dots='true' data-nav='true' data-stage-padding='15', data-loop='false', data-margin='30', data-mouse-drag="false")
+            .owl-item
+              .press-block.text-left
+                a(href='#').text-bold When Skechers Shape Ups came out, I was hired as a Spokesperson
+                p Here’s an interview live in a mall with KTLA
+              .press-block.text-left
+                a(href='#').text-bold Here’s a story on Balance Training and its amazing benefits
+                p I blogged about it on Huffington Post.
+            .owl-item
+              .press-block.text-left
+                a(href='#').text-bold Research sheds new light on weight training
+                p ABC7 fitness stories.
+              .press-block.text-left
+                a(href='#').text-bold Are new intense exercise DVDs right for you?
+                p Home exercise course.
+            .owl-item
+              .press-block.text-left
+                a(href='#').text-bold Skinny people might be fat on the inside
+                p How to live in harmony with yourself.
+              .press-block.text-left
+                a(href='#').text-bold Rowbike gives riders a total body workout
+                p How to be in tone.
+            .owl-item
+              .press-block.text-left
+                a(href='#').text-bold Skinny people might be fat on the inside
+                p How to live in harmony with yourself.
+              .press-block.text-left
+                a(href='#').text-bold Rowbike gives riders a total body workout
+                p How to be in tone.
+
+  section.section-lg.bg-white
+    .shell
+      h4.text-gray-sec.text-regular What our clients say
+      h2.text-spacing-0 Testimonials
+      .range.range-md-40.range-20
+        .cell-xs-12
+          .testimonial-block
+            .range
+              .cell-md-6.veil.reveal-md-block
+                .img
+                  img(src="images/about-1-552x561.png", width="552", height="561", alt="")
+              .cell-md-6.text-md-left
+                p.quote.quote-2
+                  q Derick Mathews is a truly excellent trainer. He is the perfect combination of tough and warm, and he works with the whole person -- mentally, emotionally and physically. Because of his efforts, I am stronger and more flexible, I have better balance and most importantly, working out has become fun. I recommend him without reservation
+                p.name.text-gray-darker.big  Sara White #[br] #[span.text-regular (housewife)]
+        .cell-xs-12
+          a(href='testimonials.html').button.button-primary.arrow.arrow-right more testimonials
+
+
+  section.section-lg.bg-image-6
+    .shell
+      h4.text-gray-sec.text-regular Some of your questions
+      h2.text-white FAQ
+      .range.range-40
+        .cell-sm-6.text-left
+          .block-faq
+            dl
+              dt.text-white How many days per week do I need to work out?
+              dd Depending on your health and fitness goals, you’ll need to commit to a minimum of 3 days of exercise each week to see results. Any fewer than that and each workout will feel like you’re starting all over again each and every time.
+
+          .block-faq
+            dl
+              dt.text-white I haven’t done any exercise in a few years. Can I jump straight into personal training?
+              dd Definitely, personal training caters for all fitness levels. Combining personal training sessions with your fitness routine is a great way to blast through barriers and achieve your fitness goals faster.
+
+
+        .cell-sm-6.text-left
+          .block-faq
+            dl
+              dt.text-white What do I need to bring to a personal training session?
+              dd Make sure you wear comfortable clothes and correct footwear.
+
+          .block-faq
+            dl
+              dt.text-white Why don’t my workouts ever get easier?
+              dd You’d think that as your body becomes stronger and more familiar with the exercises your workouts would start to feel easier. Indeed, many people who ‘go it alone’ in the gym report exactly this. When exercises are progressed frequently and consistently, the body never truly adapts to the workout, making each feel just as challenging as the one before.
+
+        .cell-sm-12
+          a(href='faq.html').button.button-white.arrow.arrow-right.text-white more faq
+
+
+  // Page Footer
+  include ../sections/_footer-default
+
+

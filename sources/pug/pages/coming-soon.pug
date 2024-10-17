@@ -1,0 +1,52 @@
+extends  ../_skeleton
+
+block variables
+  - var activeIndex = 8
+
+block title
+  title Coming soon
+
+block page
+  // Page Header
+  include ../sections/_header-default
+
+  +breadcrumb-classic('images/bg-01.jpg', 'Coming soon',
+  {
+    0: {
+      "title": "Home",
+      "href": "./"
+    },
+    1: {
+      "title": "Pages",
+      "href": "#"
+    },
+    2: {
+      "title": "Coming soon"
+    }
+  }
+  )
+
+  section.section-md.bg-white
+    .shell
+      h2.text-spacing-0.text-sm-left Coming soon
+      .range.range-40
+        .cell-sm-10.cell-md-8
+
+          // TimeCircles
+          .DateCountdown(data-date='2017-10-01 00:00:00' data-circle-fg-width='0.035' data-circle-bg-width='0.9' data-circle-bg='#f9fbfc' data-circle-inner-color='#ec3642')
+
+        .cell-sm-10.cell-md-8
+          form.rd-mailform.text-left(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+
+            .range.range-spacing-sm-10.text-sm-left.range-10
+              .cell-sm-9
+                .form-wrap
+                  label.form-label(for="contact-email") Email
+                  input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+              .cell-sm-3.text-center.text-sm-left
+                button(type="submit").button.button-primary-2.button-md Notify me
+
+
+
+  // Page Footer
+  include ../sections/_footer-default

@@ -1,0 +1,163 @@
+/*
+*
+* Posts
+* --------------------------------------------------
+*/
+
+.post-blog {
+  .range{
+    margin-top: 30px;
+  }
+  p{
+    margin-bottom: 0;
+  }
+  p + h4{
+    margin-top: 10px;
+  }
+  .link{
+    display: inline-block;
+    position: relative;
+    margin-top: 5px;
+    transition: 250ms all ease-in-out;
+  }
+  .button-block{
+    margin-top: 20px;
+    .button{
+      margin: 10px 5px 0;
+
+    }
+
+  }
+  &__title {
+
+  }
+}
+.post-blog + .post-blog{
+  margin-top: 50px;
+}
+
+.post-block {
+  max-width: 370px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid $gray-light;
+  transition: .3s;
+
+  &:hover{
+    border: 2px solid $primary;
+  }
+  .header-post {
+    padding: 20px 10px;
+    p {
+      margin-bottom: 0;
+    }
+    p + * {
+      margin-top: 5px;
+      @media (min-width: $screen-md-min) {
+        margin-top: 10px;
+      }
+    }
+
+    a{
+      &:hover{
+        color: $gray-darker;
+      }
+    }
+    @media (min-width: $screen-lg-min) {
+      padding: 30px 40px;
+    }
+  }
+
+  .body-post {
+    padding: 30px 15px;
+    a{
+      display: inline-block;
+      .icon{
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+.post-meta{
+  ul{
+    margin-left: -13px;
+    margin-right: -13px;
+    li{
+      padding-left: 13px;
+      padding-right: 13px;
+
+      a{
+        transition: 250ms all ease-in-out;
+      }
+
+      .icon {
+        margin-right: 6px;
+        font-size: 24px;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+.share-block{
+  .icon{
+    &:first-child{
+      margin-left: 20px;
+    }
+  }
+  a{
+    margin: 0 5px;
+    transition: 250ms all ease-in-out;
+  }
+}
+.author-block{
+  margin-top: 50px;
+  @media (min-width: $screen-lg-min){
+    margin-top: 90px;
+  }
+  .button-block{
+    margin-top: 30px;
+  }
+}
+.comment-block{
+  margin-top: 50px;
+  @media (min-width: $screen-lg-min){
+    margin-top: 90px;
+  }
+}
+.box-comment{
+  margin-top: 30px;
+  .link{
+    position: relative;
+    padding: 0 5px;
+    display: inline-block;
+    &:before{
+      font-size: 18px;
+    }
+  }
+  .link + .link{
+    margin-left: 25px;
+  }
+}
+.box-comment-reply{
+  margin-left:0;
+  @media (min-width: $screen-sm-min) {
+    margin-left: 60px;
+  }
+  @media (min-width: $screen-md-min){
+    margin-left: 100px;
+  }
+}
+.comment-form{
+  margin-top: 50px;
+  .range{
+    margin-top: 15px;
+  }
+  .rd-mailform{
+    margin-top: 30px;
+    .button{
+      width: 200px;
+      text-transform: uppercase;
+    }
+  }
+}

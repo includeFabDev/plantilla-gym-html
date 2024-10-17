@@ -1,0 +1,196 @@
+.rd-navbar-wrap.rd-navbar-transparent {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 10;
+
+  .rd-navbar-toggle {
+    position: absolute;
+    right: 0;
+    top: 5px;
+  }
+  .rd-navbar-nav-wrap {
+    right: 0;
+    left: inherit;
+    transform: translateX(120%);
+    &.active {
+      transform: translateX(0%);
+    }
+  }
+}
+.desktop  {
+  .rd-navbar-wrap.rd-navbar-transparent {
+
+    @media (min-width: $screen-md-min) {
+
+      .rd-navbar-toggle {
+        position: absolute;
+        right: 50px;
+        top: 30px;
+        transition: .3s all ease;
+        &.active {
+          right: 225px;
+          span {
+            background: transparent;
+            margin: 0;
+            &:after,
+            &:before {
+              display: block;
+              width: 30px;
+              transform-origin: center;
+            }
+          }
+        }
+        span {
+          height: 2px;
+
+          &:after,
+          &:before {
+            height: 2px;
+            transition: 0s;
+          }
+        }
+      }
+
+      .rd-navbar-fixed {
+        .rd-navbar-panel {
+          position: absolute;
+          padding: 50px 15px;
+          z-index:1000;
+
+          &:before {
+            background: transparent;
+            box-shadow: none;
+          }
+          .rd-navbar-toggle {
+            position: fixed;
+          }
+        }
+        .rd-navbar-nav-wrap {
+          width: 300px;
+          right: 0;
+          padding: 70px 30px 30px;
+          left: inherit;
+          height: auto;
+          overflow-y: auto;
+          overflow-x: hidden;
+          transform: translateX(120%);
+          z-index: 998;
+          &.active {
+            transform: translateX(0%);
+          }
+        }
+        .rd-navbar-nav {
+          li {
+            a {
+              font-family: $font-family-sec;
+              font-weight: 700;
+              color: $primary;
+              border: 1px solid transparent;
+              padding: 2px 50px 2px 10px;
+
+              &:hover {
+                color: $primary;
+                border: 1px solid $primary;
+                background: transparent;
+              }
+            }
+            &.active,&.opened,
+            &:hover {
+              > a {
+                color: $primary;
+                border: 1px solid $primary;
+                background: transparent;
+              }
+
+            }
+          }
+
+          .rd-navbar-submenu-toggle {
+            display: block;
+            color: $primary;
+            transition: .3s all ease-in-out;
+            &:after{
+              top: 15px;
+            }
+          }
+          .rd-navbar-dropdown,
+          .rd-navbar-megamenu {
+            li {
+              > p {
+                padding-left: 0;
+                margin-bottom: 0;
+                font-family: $font-family-sec;
+                font-weight: 700;
+                color: $gray-darker;
+              }
+            }
+            padding-left: 20px;
+            a {
+              font-weight: 400;
+              padding: 2px 10px;
+              border: 1px solid transparent;
+              color: $gray-darker;
+              &:hover {
+                border: 1px solid $gray-darker;
+                color: $gray-darker;
+              }
+            }
+          }
+        }
+
+      }
+      .rd-navbar-submenu.focus,
+      .rd-navbar-submenu.active{
+        .rd-navbar-submenu-toggle{
+          color: $primary;
+        }
+      }
+    }
+
+    @media (min-width: 1260px){
+      .rd-navbar-fixed {
+        .rd-navbar-panel {
+          padding: 50px;
+        }
+      }
+    }
+
+  }
+
+  .nav-inner {
+    @media (min-width: $screen-md-min){
+      width: 300px;
+      position: fixed;
+      top:0;
+      right: 0;
+      width: 300px;
+      height: 70px;
+      background: transparent;
+      z-index: 999;
+      transform: translateX(300px);
+      transition: 0.35s all cubic-bezier(0.65, 0.05, 0.36, 1);
+      &:after {
+        content: '';
+        bottom: -10px;
+        width: 100%;
+        position: absolute;
+        height: 10px;
+        right: 0;
+        background: linear-gradient(to bottom, $white, rgba($white,0));
+        transition: 0.35s all cubic-bezier(0.65, 0.05, 0.36, 1);
+        transform: translateX(300px);
+      }
+    }
+  }
+  .rd-navbar-nav-wrap.active + .nav-inner{
+    background: $white;
+    transform: translateX(0);
+    &:after{
+      transform: translateX(0);
+    }
+  }
+}
+
+
+

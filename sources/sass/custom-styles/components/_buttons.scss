@@ -1,0 +1,285 @@
+/*
+*
+* Buttons
+* --------------------------------------------------
+*/
+
+// Button General Styles
+
+.button {
+  display: inline-block;
+  position: relative;
+  font-family: $font-family-sec;
+  // btn-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius)
+  @include btn-size(13px, 22px, 14px, 20px, 0);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  border-style: solid;
+  border-width: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.15em;
+  cursor: pointer;
+  vertical-align: middle;
+  user-select: none;
+  transition: 250ms all ease-in-out;
+
+
+
+  &:focus,
+  &:active,
+  &:active:focus {
+    outline: none;
+  }
+
+
+  .caret {
+    margin-left: 8px;
+  }
+}
+
+.button-block {
+  display: block;
+  width: 100%;
+}
+
+
+// Appearance style
+// --------------------------------------------------
+
+.button-default {
+  @include btn-variant($gray-darker, transparent, $gray, $white, $gray-darker, $gray-darker);
+}
+
+.button-white {
+  @include btn-variant($white, transparent, $white, $white, $primary, $primary);
+  &:before{
+    color: $white;
+  }
+}
+
+.button-white-2 {
+  @include btn-variant($primary, $white, $white, $white, $primary, $white);
+
+}
+
+.button-primary {
+  @include btn-variant($primary, transparent, $primary, $white, $primary, $primary);
+}
+.button-primary-2 {
+  @include btn-variant($white, $primary, $primary, $primary, $white, $primary);
+}
+.button-primary-3 {
+  @include btn-variant($white, $primary,$white, $primary, $white, $primary);
+}
+.button-primary-4 {
+  @include btn-variant($white, transparent, $primary, $primary, $white, $primary);
+}
+.button-secondary {
+  @include btn-variant($gray-darker, transparent, $gray-base-sec, $white, $gray-base-sec, $gray-base-sec);
+  font-weight: 700;
+}
+
+.button-secondary-1 {
+  @include btn-variant($gray-darker, transparent, transparent, $white, $gray-darker, $gray-darker);
+}
+
+.button-steel-blue {
+  @include btn-variant(#2f6890, $white, #2f6890, $white, darken(#2f6890, 10%), darken(#2f6890, 10%));
+}
+
+.button-transparent {
+  @include btn-variant($primary, transparent, $primary, $primary, transparent, $primary);
+}
+
+.button-cerulean {
+  @include btn-variant(#14a5eb, $white, #14a5eb, $white, darken(#14a5eb, 5%), darken(#14a5eb, 5%));
+}
+
+.button-mandy {
+  @include btn-variant(#e75854, $white, #e75854, $white, darken(#e75854, 10%), darken(#e75854, 10%));
+}
+
+// Btn with shadow
+.button-shadow {
+  box-shadow: 0 3px 11px 0 rgba(0, 0, 0, 0.15);
+
+  &:before{
+    opacity: 0;
+  }
+
+  &:hover {
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.15);
+  }
+}
+
+// Button Sizes
+// --------------------------------------------------
+
+.button-xs {
+  // btn-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius)
+  @include btn-size(7px, 28px, 14px, 24px, 0);
+}
+
+.button-sm {
+  // btn-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius)
+  @include btn-size(10px, 22px, 14px, 20px, 0);
+  font-weight: 700;
+}
+
+.button-md {
+  // btn-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius)
+  @include btn-size(13px, 22px, 18px, 20px, 0);
+  text-transform: inherit;
+}
+
+.button-lg {
+  // btn-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius)
+  @include btn-size(18px, 30px, 18px, 28px, 0);
+  font-weight: 700;
+  text-transform: inherit;
+}
+
+// Button Shapes
+// --------------------------------------------------
+
+.button-circle {
+  border-radius: 30px;
+}
+
+.button-ellipse {
+  &-md {
+    border-radius: 5px;
+  }
+
+  &-lg {
+    border-radius: 10px;
+  }
+}
+
+// Button Icon styles
+// --------------------------------------------------
+
+.button {
+  &.button-icon {
+    padding: 10px 17px;
+    font-weight: 700;
+    text-transform: inherit;
+    font-size: 18px;
+    letter-spacing: .025em;
+
+    &:before{
+      opacity: 0;
+    }
+
+    .icon {
+      display: inline-block;
+      vertical-align: middle;
+      transition: 0s;
+    }
+
+    &-left {
+      .icon {
+        padding-right: 10px;
+      }
+    }
+
+    &-right {
+      .icon {
+        padding-left: 10px;
+      }
+    }
+  }
+}
+
+.arrow{
+  position: relative;
+  &:before{
+    position: absolute;
+    content: '\e317';
+    font-family: 'Material Icons';
+    font-size: 24px;
+    line-height: 24px;
+    opacity: 1;
+  }
+  &-md{
+
+    &:before{
+      font-size: 36px;
+    }
+  }
+  &-right{
+    &:before{
+      top: 50%;
+      margin-top: -12px;
+      right: -16px;
+      transform: rotateY(180deg);
+      transform-origin: center;
+    }
+
+  }
+  &-down{
+    &:before{
+      margin-left: -10px;
+      margin-top: -4px;
+      top: 90%;
+      left: 50%;
+      transform: rotate(-90deg);
+      transform-origin: center;
+    }
+
+  }
+  &-left{
+    &:before{
+      left: -16px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+  }
+  &-up{
+    &:before{
+      margin-left: -10px;
+      bottom: 90%;
+      left: 50%;
+      transform: rotate(90deg);
+      transform-origin: center;
+    }
+
+  }
+
+  &:hover,&:active,
+  &:focus{
+    &:before{
+      opacity: 0;
+    }
+  }
+  &-sm{
+    &:before{
+      font-size: 14px;
+    }
+  }
+}
+.page{
+  .group-xl{
+    .button + .button{
+      margin-left: 27px;
+    }
+    .button-md{
+      padding: 18px 22px;
+    }
+    .button-icon + .button-icon{
+      margin-left: 15px;
+    }
+  }
+}
+.link.arrow{
+  &:hover,
+  &:active,
+  &:focus{
+    &:before{
+      opacity: 1;
+    }
+  }
+}
+

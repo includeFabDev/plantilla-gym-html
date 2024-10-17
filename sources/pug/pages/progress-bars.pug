@@ -1,0 +1,98 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-progress-bar-linear
+include ../elements/_ui-counter
+
+block variables
+	- var activeIndex = 8
+
+block title
+	title Progress Bars
+
+block page
+	// Page Header
+	include ../sections/_header-default
+
+
+	+breadcrumb-classic('images/bg-01.jpg', 'progress bars',
+	{
+		0: {
+      "title": "Home",
+      "href": "./"
+    },
+    1: {
+      "title": "Pages",
+      "href": "#"
+    },
+    2: {
+      "title": "progress bars"
+    }
+  }
+	)
+
+	// Skill Bars
+	section.section-md.bg-white
+		.shell
+			h2.text-uppercase.text-md-left progress bars, #[br] skill bars, counters
+			p.text-md-left.big These elements are vital to every website, and with them you are able to #[br.veil.reveal-sm-inline]improve the overall look of your resource and attract more clients.
+
+
+			.range.range-xs-center.range-md-left.range-40.range-md-justify
+				.cell-xs-10.cell-sm-8.cell-md-5
+
+					+progress-bar-linear({
+						"title": "Individual training",
+						"valueTo": "75"
+					})
+
+					+progress-bar-linear({
+						"title": "Group training",
+						"valueTo": "50"
+					})
+
+					+progress-bar-linear({
+						"title": "Healthy recipes",
+						"valueTo": "35"
+					})
+
+
+				.cell-md-6.text-md-left
+					h4 Welcome to our website
+					p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers.
+
+					
+	include ../sections/_counter
+
+
+	// Section Circle Progress Bars
+	section.section-sm.bg-white
+		.shell
+			.range.range-xs-center
+				.cell-xs-12
+					.range.range-xs-center.range-60
+						.cell-xs-5.cell-md-3
+							// Circle Progress Bar
+							.progress-bar-circle(data-value="0.75", data-gradient="#ec3642", data-empty-fill="rgb(249,251,252)", data-size="170", data-thickness="7")
+								span
+								.progress-bar-circle-title leadership
+
+						.cell-xs-5.cell-md-3
+							// Circle Progress Bar
+							.progress-bar-circle(data-value="0.5", data-gradient="#ec3642", data-empty-fill="rgb(245,245,245)", data-size="170", data-thickness="7")
+								span
+								.progress-bar-circle-title management
+						.cell-xs-5.cell-md-3
+							// Circle Progress Bar
+							.progress-bar-circle(data-value="0.9", data-gradient="#ec3642", data-empty-fill="rgb(245,245,245)", data-size="170", data-thickness="7")
+								span
+								.progress-bar-circle-title innovation
+						.cell-xs-5.cell-md-3
+							// Circle Progress Bar
+							.progress-bar-circle(data-value="0.55", data-gradient="#ec3642", data-empty-fill="rgb(245,245,245)", data-size="170", data-thickness="7")
+								span
+								.progress-bar-circle-title resilience
+
+
+	// Page Footer
+	include ../sections/_footer-default

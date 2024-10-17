@@ -1,0 +1,105 @@
+/*
+*
+* books
+* --------------------------------------------------
+*/
+
+.books-item {
+  max-width: 370px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 18px;
+
+  * + p {
+    margin-top: 25px;
+
+    @media (min-width: $screen-sm-min) {
+      padding-right: 25px;
+    }
+    @media (min-width: $screen-md-min) {
+      margin-top: 35px;
+    }
+  }
+  p + p {
+    margin-top: 20px;
+  }
+
+  * + .button {
+    margin-top: 15px;
+  }
+}
+
+.img-link {
+  position: relative;
+  display: inline-block;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid $primary;
+    content: '';
+    opacity: 0;
+    transition: 250ms all ease-in-out;
+  }
+  &:after {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    left: 2px;
+    bottom: 2px;
+    border: 2px solid $gray-lighter;
+    content: '';
+    opacity: 0;
+    transition: 250ms all ease-in-out;
+  }
+  &:hover {
+    &:after, &:before {
+      opacity: 1;
+    }
+  }
+}
+
+.button-img {
+  display: inline-block;
+  vertical-align: middle;
+  padding-bottom: 6px;
+}
+
+.price {
+  font-family: $font-family-sec;
+  font-size: 18px;
+  .button{
+    margin-left: 5px;
+  }
+}
+
+.single-book {
+
+  p.big {
+    font-family: $font-family-sec;
+  }
+  .quote {
+    max-width: 600px;
+    margin-left: auto;
+    margin-top: 30px;
+    @media (min-width: $screen-sm-min) {
+      margin-top: 45px;
+    }
+  }
+  .quote + p {
+    margin-top: 40px;
+  }
+}
+
+.book-carousel {
+
+  .thumb{
+    &:after{
+      content: '\e829';
+      font-family:'Thin Regular';
+    }
+  }
+}

@@ -1,0 +1,25 @@
+/*
+*
+* Counter
+* --------------------------------------------------
+*/
+
+
+.counter {
+
+  &__subtitle{}
+
+  &-wrap{
+    p{
+      margin-top: 0;
+      font-family: $font-family-sec;
+
+    }
+  }
+}
+
+.bg-white{
+  .counter-wrap{
+    color: $gray-darker;
+  }
+}

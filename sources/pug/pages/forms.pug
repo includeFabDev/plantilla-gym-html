@@ -1,0 +1,140 @@
+extends  ../_skeleton
+
+block variables
+	- var activeIndex = 8
+
+block title
+	title Forms
+
+block page
+	// Page Header
+	include ../sections/_header-default
+
+	+breadcrumb-classic('images/bg-01.jpg', 'Forms',
+	{
+		0: {
+			"title": "Home",
+			"href": "./"
+		},
+		1: {
+			"title": "Pages",
+			"href": "#"
+		},
+		2: {
+			"title": "Forms"
+		}
+	}
+	)
+
+	section.section-md
+		.shell
+			.range
+				.cell-sm-8.cell-md-6.text-sm-left
+					h2.text-uppercase forms
+					p.big With forms you can get almost any kind of information from your visitors, who will definitely appreciate this attractive element.
+
+			.range.text-sm-left
+				.cell-sm-8.cell-md-6.cell-lg-5
+					h4 Login Form
+					ul.group-sm
+						li
+							a(href='#').button.button-steel-blue.button-icon.button-icon-left.text-spacing-0
+								span.icon.fa.fa-facebook
+								span.button-text.text-bold facebook
+						li
+							a(href='#').button.button-cerulean.button-icon.button-icon-left.text-spacing-0
+								span.icon.fa.fa-twitter
+								span.button-text.text-bold twitter
+						li
+							a(href='#').button.button-mandy.button-icon.button-icon-left.text-spacing-0
+								span.icon.fa.fa-google-plus
+								span.button-text.text-bold google
+
+					p.big.text-gray-darker.font-accent.text-bold or
+					// RD Mailform
+					form.rd-mailform.text-left
+						.form-wrap.form-wrap-validation
+							label.form-label(for="forms-login-name") Username
+							input#forms-login-name.form-input(type="text" name="name" data-constraints='@Required')
+						.form-wrap.form-wrap-validation
+							label.form-label(for="forms-login-password") Password
+							input#forms-login-password.form-input(type="password" name="password" data-constraints="@Required")
+						.form-wrap.text-center.text-sm-right
+							button(type="submit").button.button-primary-2.text-bold.text-spacing-25 Enter
+
+	section.bg-dark.bg-image-17.bg-primary
+		.shell.section-lg
+			h2.text-uppercase Newsletter
+			h6 Keep up with my latest news and events. Subscribe to my newsletter.
+			.range-center.range.range-30
+				.cell-sm-9.cell-md-6
+					// RD Mailform
+					form.rd-mailform.rd-mailform-inline.text-left(data-form-output="form-output-global", data-form-type='forms', method='post', action='bat/rd-mailform.php')
+						.form-wrap
+							label.form-label.form-label-2(for="inline-email") Enter your email here
+							input#inline-email.form-input.form-input-2(type="email" name="email" data-constraints="@Email @Required")
+						button(type="submit").button.button-2.button-primary-2.button-icon.text-spacing-0
+							span.icon.icon-xl.thin-icon-email
+
+	section
+		.shell-fluid
+			.range.range-md-condensed
+				.cell-md-6.bg-white.section-lg
+					.range.range-center
+						.cell-md-10
+							h2.text-spacing-0.text-sm-left Contact me
+							// RD Mailform
+							form.rd-mailform.text-left(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+								.range.range-10.form-wrap.range-spacing-sm-10
+									.cell-sm-6
+										.form-wrap
+											label.form-label(for="contact-name") First name
+											input#contact-name.form-input(type="text" name="name" data-constraints='@Required')
+									.cell-sm-6
+										.form-wrap
+											label.form-label(for="contact-name-2") Last name
+											input#contact-name-2.form-input(type="text" name="name-2" data-constraints=" @Required")
+								.form-wrap
+									label.form-label(for="contact-message") Message
+									textarea#contact-message.form-input(name="message" data-constraints="@Required")
+
+								.range.range-10.form-wrap.range-spacing-sm-10
+									.cell-sm-7.cell-md-12.cell-lg-7
+										.form-wrap
+											label.form-label(for="contact-email") E-Mail
+											input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+									.cell-sm-5.cell-md-12.cell-lg-5
+										.form-button.text-center.text-lg-left
+											button(type="submit").button.button-block.button-primary-2.button-md.text-spacing-0 Send a message
+				.cell-md-6.bg-primary.section-lg
+						.range.range-center
+							.cell-md-10
+								h2.text-spacing-0.text-sm-left.text-white Newsletter
+								h4.text-sm-left.text-white Subscribe to my newsletter for
+								.range.text-left.range-30
+									.cell-sm-6.cell-md-12.cell-lg-6
+										ul.list.list-marked.list-marked-white.big
+											li Tips on managing stress
+											li Ways to stay motivated
+											li How to improve your metabolism
+											li Healthy and tasty recipes
+											li How to conquer procrastination
+									.cell-sm-6.cell-md-12.cell-lg-6
+										// RD Mailform
+										form.rd-mailform.text-left(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+											.form-wrap-2
+												label.form-label.text-white(for="contact-name2") First name
+												input#contact-name2.form-input.form-input-3(type="text" name="name" data-constraints='@Required')
+
+											.form-wrap-2
+												span.icon.icon-sm.thin-icon-email
+												label.form-label.text-white(for="contact-email2") E-Mail
+												input#contact-email2.form-input.form-input-3.form-input-icon(type="email" name="email" data-constraints="@Email @Required")
+
+											.form-wrap-2
+												.form-button.text-center.text-lg-left
+													button(type="submit").button.button-block.button-white-2.button-md.text-bold Sign up
+
+
+	// Page Footer
+	include ../sections/_footer-default

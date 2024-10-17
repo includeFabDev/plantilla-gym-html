@@ -1,0 +1,206 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-panel
+include ../elements/_widget-flickrfeed
+  include ../elements/_widget-twitter
+
+block variables
+  - var activeIndex = 5
+
+block title
+  title Blog Post
+
+block page
+  // Page Header
+  include ../sections/_header-default
+
+  +breadcrumb-classic('images/bg-01.jpg', 'blog',
+  {
+    0: {
+      "title": "Home",
+      "href": "./"
+    },
+    1: {
+      "title": "blog",
+      "href": "blog.html"
+    },
+    2:{
+      "title": "Blog Post"
+    }
+  }
+  )
+
+  section.section-md.bg-white
+    .shell
+      h2.text-spacing-0.text-md-left Blog
+      .range.range-40.range-md-reverse
+        .cell-md-9.cell-lg-8.cell-lg-preffix-1
+          .post-blog.text-sm-left
+            p.font-accent.big April 10, 2017
+            h4 Monday motivation
+            .range.range-30
+              .cell-xs-12
+                img(src="images/single-post-1-770x454.jpg", width="770", height="454", alt="")
+              .cell-xs-12
+                p Happy Monday! Most people dread Monday, but I like to look at it as the perfect day to start fresh. Whether you've neglected your CrossFit or yoga routine, fallen into bad eating habits, or both - today is the day to get back on track. I get it... juggling work, family time, chores, school and social life can be tough. With events, weddings, appointments and long work hours, it can be easy for some people to put off their time to sweat. But don't let a busy schedule get in the way of regular exercise and nutritious eating. Making your body a priority is possible. Here are some tips to help you stay motivated:
+              .cell-xs-12
+                ul.list.list-marked.list-marked-type-1.text-left.list-marked-bold
+                  li Schedule your workout times in advance as you would any other appointment. Write it down in a calendar, journal or on your phone.
+                  li Keep a bag packed with a change of clothes, shoes and all other necessities so you can head straight to your workout without having to stop at home.
+                  li Find some fitspiration on Instagram or in magazines. Whether it's pictures of healthy ideas for dinner or a fit body - visuals help!
+                  li Keep in touch with your fitfam! Text your trainer, friend, co-worker, or family member at some point during the day to cheer them on or to share what you've accomplished. Having support from those around you gives you a big push towards reaching your goals.
+              .cell-xs-12
+                .post-meta
+                  ul.list-inline.font-accent.text-bold.text-left
+                    li
+                      span.icon.icon-xs.mdi.mdi-clock.text-primary
+                      | 04/25/2017
+                    li
+                      span.icon.icon-xs.mdi.mdi-comment-multiple-outline.text-primary
+                      a(href='#').text-gray-sec 3 comments
+                    li
+                      span.icon.icon-xs.mdi.mdi-heart-outline.text-primary
+                      | 25
+                    li
+                      span.icon.icon-xs.mdi.mdi-share.text-primary
+                      | 11
+              .cell-xs-12
+                .share-block
+                  p.text-bold.font-accent Share this post via
+                    a(href='#').icon.big.fa-facebook
+                    a(href='#').icon.big.fa-google-plus
+                    a(href='#').icon.big.fa-twitter
+
+          .author-block.text-sm-left
+            .range.range-30
+              .cell-xs-12.text-center
+                h4.text-gray-darker About the author
+              .cell-xs-12.cell-sm-5.cell-md-4
+                img(src="images/single-post-2-270x242.jpg", width="270", height="242", alt="")
+              .cell-xs-12.cell-sm-7.cell-md-8
+                p I am a professional blogger interested in everything taking place in cyberspace. I am running this website and try my best to make it a better place to visit. I post only the articles that are related to the topic and thoroughly analyze all visitors’ comments to cater to their needs better. In my articles and blog posts I try to share more information with my readers about CrossFit, yoga, boxing, and workout motivation, and I hope every visitor of this website will find them interesting.
+                .button-block
+                  a(href='single-member.html').button.button-primary.arrow.arrow-right hire me
+
+          .comment-block.text-left
+            h4.text-gray-darker Comments
+            .box-comment
+              .unit.unit-horizontal
+                .unit__left
+                  img(src="images/single-post-3-70x70.jpg", width="70", height="70", alt="").icon-circle
+                .unit__body
+                  p.font-accent.text-gray-darker.text-bold Jessica H. Wheaton #[span.text-gray-sec 15 hours ago]
+                  p I thought I knew everything there was to know about "dieting and weight loss". There's literally not a diet or fad I haven't followed. How could I be so wrong? Training with Derick has been the ultimate investment in my health and future.
+                  a(href='#').link.arrow.arrow-right.font-accent.text-bold Reply
+                  a(href='#').link.arrow.arrow-right.font-accent.text-bold Share
+
+            .box-comment.box-comment-reply
+              .unit.unit-horizontal
+                .unit__left
+                  img(src="images/single-post-4-70x70.jpg", width="70", height="70", alt="").icon-circle
+                .unit__body
+                  p.font-accent.text-gray-darker.text-bold Ryan K. Moran   #[span.text-gray-sec 9 hours ago]
+                  p Under Derick's expert guidance, I began to understand how my body composition, hormones, emotions, stress levels, sleep, nutrition and training were interlinked, and that finding the optimum balance between these elements was the key to weight loss.
+                  a(href='#').link.arrow.arrow-right.font-accent.text-bold Reply
+                  a(href='#').link.arrow.arrow-right.font-accent.text-bold Share
+
+          .comment-form
+            h4.text-gray-darker.text-sm-left Leave a comment
+            // RD Mailform
+            form.rd-mailform.text-sm-left(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+
+              .form-wrap
+                textarea#contact-message.form-input(name="message" data-constraints="@Required")
+              .range.range-sm-reverse.range-middle
+                .cell-sm-6
+                  .form-button.group-sm.text-center.text-sm-right
+                    button(type="submit").button.button-primary submit
+                .cell-sm-6.text-center.text-sm-left
+                  .share-block
+                    p.text-bold.font-accent Sign up with
+                      a(href='#').icon.big.fa-facebook
+                      a(href='#').icon.big.fa-google-plus
+                      a(href='#').icon.big.fa-twitter
+
+
+
+          .range.text-sm-left
+            .cell-xs-12
+              ul.pagination-custom
+                li.disabled
+                  a(href='#').icon.mdi.material-icons-keyboard_backspace
+                li.active
+                  a(href='#') 1
+                li
+                  a(href='#') 2
+                li
+                  a(href='#') 3
+                li.dot
+                  a(href='#') 4
+                li
+                  a(href='#') 15
+                li
+                  a(href='#').icon.mdi.material-icons-keyboard_backspace
+
+        .cell-md-3.cell-lg-3
+          .range
+            .cell-xs-12.text-md-left
+              p.font-accent.big.text-bold.text-gray-darker Search
+              // RD Search
+              // RD Search
+              form.rd-search(action="search-results.html", method="GET", data-search-live="")
+                .form-wrap
+                  input(class="form-input" id="rd-search-form-input" type="text" name="s" autocomplete="off")
+                  button(type='submit').form-search-submit.arrow.arrow-right Search
+
+
+
+          .range
+            .cell-xs-12.text-md-left
+              p.font-accent.big.text-bold.text-gray-darker Flickr
+              // RD Flickr
+              +widget-flickrfeed("tm-62181", {"data-image_q": "src"}, {
+                "style": "group group-xs widget-flickrfeed-lg",
+                "dataSize": "1050x700",
+                "img": {
+                  "width": 86,
+                  "height": 83
+                }
+              }, 6)
+          .range.range-50
+            .cell-xs-12.cell-sm-7.cell-md-12.text-sm-left
+              p.font-accent.big.text-bold.text-gray-darker Twitter Feed
+              +widget-twitter({
+                "dataTwitterUsername": "templatemonster"
+              })
+            .cell-xs-12.cell-sm-3.cell-md-12.text-center.text-sm-left
+              p.font-accent.big.text-bold.text-gray-darker.text-sm-left Archive
+              ul.list.list-marked.text-left.list-regular.list-inline-block
+                li
+                  a(href='#') March
+                li
+                  a(href='#') February
+                li
+                  a(href='#') January
+                li
+                  a(href='#') December
+                li
+                  a(href='#') November
+                li
+                  a(href='#') October
+                li
+                  a(href='#') September
+                li
+                  a(href='#') August
+
+
+
+
+
+
+
+  // Page Footer
+  include ../sections/_footer-default
+
+
